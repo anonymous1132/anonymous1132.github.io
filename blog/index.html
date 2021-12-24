@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="博客 技术 编程 code program" />
+   
+  <meta name="description" content="个人博客" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     我说
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/blog/dist/main.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/blog/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/blog/">我说</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['劳逸结合是不错，但也别放松过了头', '无论是冒险还是做生意，机会都稍纵即逝', '耽误太多时间，事情可就做不完了'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-经验分享"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/12/22/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"
+    >经验分享</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/12/22/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="article-date">
+  <time datetime="2021-12-22T01:00:05.000Z" itemprop="datePublished">2021-12-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="1、数据库结构同步"><a href="#1、数据库结构同步" class="headerlink" title="1、数据库结构同步"></a>1、数据库结构同步</h5><p>场景：开发过程中，对数据库对象进行一系列操作（常见如表、视图、存储过程、函数的增删改），开发完成后需要在正式环境的数据库上重复一次操作。即麻烦还容易出错</p>
+<p>解决方案：<br>借助于navicat工具。不同版本不大一样， 以navicat premium 10为例。</p>
+<h5 id="2、代码版本管理神器–Git使用"><a href="#2、代码版本管理神器–Git使用" class="headerlink" title="2、代码版本管理神器–Git使用"></a>2、代码版本管理神器–Git使用</h5><p>初学者推荐教程：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000">Git教程 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>
+<h5 id="git的三个区域"><a href="#git的三个区域" class="headerlink" title="git的三个区域"></a>git的三个区域</h5><p>历史记录区：最近的一次提交。别名：HEAD，不区分大小写。历史记录区的上一个记录：HEAD~1。使用git reset 操作可以直接将当前head指向某一个commit-id (谨慎使用)<br>暂存区：可使用git restore –staged 将指定文件的暂存区内容退回至历史记录区状态。使用git commit 可以将暂存区内容提交到历史记录区。<br>工作区：当前文件状态。可使用git add命令将指定文件工作区内容同步到缓存区，使用git restore命令将指定文件工作区退回到历史记录区一致。<br>注：git restore在较老的git版本不可用，使用checkout代替，报错时，可使用git status查看获取帮助</p>
+<h5 id="commit-id"><a href="#commit-id" class="headerlink" title="commit-id"></a>commit-id</h5><p>所有对历史记录区的非查询操作都会产生新的commit id。可以将一个commit-id视为快照 （或地址引用ref）。除了根记录，其他所有记录都有“父记录”,最终都可追溯到根记录。从根记录到Head形成一个commit链。正常情况下，任意两个记录，都可以追溯到同一个“祖先记录”，commit链上找不到共同commit节点的两个commit-id是无法成功合并的。对仓库的各种历史版本穿越、查看操作记录都跟commit-id密切相关。每个commit-id代表了git记录的仓库文件一系列变化的元数据。即不可通过commit-id获取该次提交时间段内发生的变化。</p>
+<p>注：ref引用。包含commit-id hash字符串及指向commit-id的别名字符串，如分支名称、commit-id短写、tag名、head等</p>
+<h6 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h6><p>分支本质上是对commit-id的别名操作，其指向一个commit-id。通过分支可以方便快速对项目文件不同版本切换、合并等操作。</p>
+<h6 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h6><p>为commit-id打标签，一般用于标记里程碑</p>
+<h6 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h6><ul>
+<li><p>git init 创建git仓库</p>
+</li>
+<li><p>git help 查看帮助，默认都是比较常用的命令。git help -a 列出全部命令。git help git 打开网页查看介绍。</p>
+</li>
+<li><p>git clone 从远程仓库创建本地仓库</p>
+</li>
+<li><p>git status 获取当前分支一些基本信息</p>
+</li>
+<li><p>git remote 远程仓库<br>  git remote -v 查看远程仓库列表详情：含git远程仓库的名称与地址<br>  git remote add 添加一个远程仓库作为本地仓库的远程仓库<br>  git remote remove 删除本地仓库与远程仓库的关联</p>
+<p> 注： 只是对远程仓库配置的操作，与内容无关。</p>
+</li>
+<li><p>git fetch 从远程仓库获取最新内容（至拉取到.git目录下，不会对当前branch有影响）</p>
+</li>
+<li><p>git branch 查看本地所有分支名称。<br>  git branch <branch-name>:创建一个分支，内容指向当前分支的head。<br>  git branch -v或git branch -vv 查看本地所有分支的详细情况，后者更详细。<br>  git branch -d或git branch -D:删除某个分支（非当前分支），前者不可删除head不被本地其他分支包含的分支。后者表示确信要删除，尽量使用前者.<br>  git branch -a 查看所有分支，一般要查看远程分支时才用</p>
+</li>
+<li><p>git switch 切换分支（老版本使用checkout）<br>  git switch <branch-name>:切换至指定分支。若指定分支名本地不存在，远程仓库也不存在，则报错。若远程仓库有该分支，则在本地创建该分支，并同步至远程该分支。<br>  git switch -c ：创建一个分支，并切换至该分支。分支head指向切换前的分支head。进行分支切换之前最好确保暂存区、工作区与head一致。若分支本地已经存在则操作失败</p>
+</li>
+<li><p>git log 查看日志，类似的还有git show <ref></p>
+</li>
+<li><p>git reflog 查看所有本地仓库head指向的 commit-id变化日志</p>
+</li>
+<li><p>git add、git commit 、git restore 三个区的操作<br>   git commit -m  编辑消息后提交<br>   git commit -m “Message”:提交时指定信息<br>   git commit –amend 编辑消息后提交，并与提交前head进行rebase -i融合<br>  git commit –amend –no-edit 提交，并与提交前head进行rebase -i 融合，并使用提交前的head消息文本</p>
+</li>
+<li><p>git reset <ref>：将当前分支head设置为<ref>，重置暂存区</p>
+<p>git reset <ref> –hard:将当前分支head设置为<ref>,重置暂存区，同时将工作区内容变更为head</p>
+<p>git reset <ref> –soft:即只将当前分支head设置为<ref>，不改变暂存区和工作区。</p>
+<p>例如：git reset head:将暂存区内容重置。效果等同于git restore –staged .</p>
+</li>
+<li><p>git pull、git push<br> 本地仓库与远程仓库间推送与拉取。<br> git push:操作前最好先git fetch，确保推送到分支没有其他人提交。若有其他人的提交，需先git pull，然后auto-merge或rebase。注意：推送成功必须保证远程分支的head在当前分支的commit链上。<br> git pull:拉取的分支最好未进行过新的提交，否则默认在拉取的时候会进行auto-merge，产生新的merge commit。</p>
+</li>
+<li><p>git merge <ref>合并:<br>git 合并操作，就是通过找到最近的一次共同commit-id,对该commit-id之后的差异进行分别提交的操作。若合并的两个commit对同一个文件同一行都进行修改，则会引发冲突，要求解决冲突后才能合并成功。解决冲突时对冲突的文件进行git add \git commit 操作来生成合并之后的commit。<br>不会引起冲突的情况：<br>  A合并B,A的head在B的commit链上。这种情况，A合并后的head不会产生新的commit-id,直接引用B.实际上就等于是git reset –hard B<br>  两个commit没有共同修改的文件。会产生新的commit-id,commit链上。</p>
+</li>
+<li><p>git rebase 基于某次提交重新提交<br>git rebase <ref><br>git rebase -i <ref> 交互式操作。可在列表中进行分支的合并</p>
+</li>
+<li><p>git stash:将当前工作区、暂存区的内容推入栈。使用命令后重置当前工作区、暂存区与head保持一致。（untracked files不受影响）</p>
+</li>
+</ul>
+<p>git stash list:查看stash 栈内容</p>
+<p>git stash pop:从stash栈中取出一上一个内容</p>
+<p>git stash clear:清空stash栈</p>
+<p>git stash apply <index>:应用栈中的第几条。不会对栈有影响</p>
+<p>建议在原commit-id上，暂存区、工作区无内容的情况下pop|apply。</p>
+<ul>
+<li>git cherry-pick <ref>: 将某个commit提交的修改应用到当前分支。一般用于不在当前commit链中的commit</li>
+</ul>
+<h6 id="建议的代码推送流程"><a href="#建议的代码推送流程" class="headerlink" title="建议的代码推送流程"></a>建议的代码推送流程</h6><p>1、master作为公用的分支，拉取至本地master分支。<br>2、本地创建个人开发分区。必要的可以为每个任务创建分支。<br>3、推送前：在开发分支进行git add、git commit 一系列操作（提交说明最好跟开发内容相关），确保工作区、暂存区干净。<br>4、如果有多个commit-id需要提交： git rebase -i master（或者git reset master;git commit -a）。将多个commit id 合并为一个，避免后面多次处理同一个冲突<br>5、git fetch<br>6、git branch -vv查看远程master分支是否有新的推送<br>7、git switch master切换至master分支。<br>8、如果第6步查到有新的远程推送，则使用git pull拉取最新内容。然后切换至开发的分支，<br>使用git rebase master将开发分支基于新的master head重新产生commit链。注：可能遇到冲突。处理完冲突后git add修改的文件，git rebase –continue即可。<br>9、在master分支进行git merge 开发分支。<br>10、git push推送至远程master<br>11、切换回开发分支，继续开发</p>
+<h5 id="3、利用git和node进行-net-vue项目自动化发布"><a href="#3、利用git和node进行-net-vue项目自动化发布" class="headerlink" title="3、利用git和node进行.net+vue项目自动化发布"></a>3、利用git和node进行.net+vue项目自动化发布</h5><p>需要本地安装git和node，msbuild.exe（.net core 可使用dotnet.exe）；远程服务器安装git</p>
+<p>1、创建远程仓库，用于保存编译后需要发布的文件</p>
+<p>2、在Vue项目的 package.json中添加编写node脚本（windows环境下支持cmd命令）：</p>
+<ul>
+<li><pre><code>init     个人项目可不配置该项，主要用于先同步至远程仓库一致，避免冲突而中断
+</code></pre>
+</li>
+<li><pre><code>build   需要配置好build文件存放的web项目路径。且在csproj项目中为该路径配置包含所有文件
+</code></pre>
+</li>
+<li><pre><code>clear  用于清除不需要的vue build文件。不然发布的文件中vue build文件将越来越多，大多是之前版本的无用数据
+</code></pre>
+</li>
+<li><pre><code>msbuild 需要编译器路径。需要为.net项目添加发布
+</code></pre>
+</li>
+<li><pre><code>gitpush 推送新版本至远程仓库
+</code></pre>
+</li>
+<li><pre><code>ssh 用于到测试环境（213服务器）项目目录下拉取部署文件
+</code></pre>
+</li>
+<li><pre><code>release
+</code></pre>
+</li>
+<li><pre><code>mstsc远程桌面至正式环境，拉取部署文件发布 
+</code></pre>
+</li>
+</ul>
+<p>注意：<br>1、以上每个命令都可以单独使用，完成不同的功能，release是各命令的组合<br>2、webconfig等本地与正式环境不一致的文件需要添加到AppPublish.gitignore下<br>3、对于.net core项目：由于asp.net core项目的实例是独立运行于IIS的，（表现为任务管理器中的任务名为项目.exe名，而非w3p.exe）。在发布时如果项目在运行中会导致exe文件被使用而锁定，拉取后无法立即应用最新程序，所以在服务端可以写个cmd脚本发布时执行：<br>例如：        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># IIS中部署的项目名称为test-sq。发布的项目路径为当前cmd路径下publish文件夹</span><br><span class="line"></span><br><span class="line">C:\Windows\System32\inetsrv\appcmd.exe stop apppool &#x2F;apppool.name:test-sq</span><br><span class="line">cd publish</span><br><span class="line">git pull</span><br><span class="line">C:\Windows\System32\inetsrv\appcmd.exe start apppool &#x2F;apppool.name:test-sq</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E7%BA%B7%E4%BA%91/" rel="tag">纷云</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2021W14"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/04/06/2021W14/"
+    >第14周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/04/06/2021W14/" class="article-date">
+  <time datetime="2021-04-06T00:38:31.000Z" itemprop="datePublished">2021-04-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="江宁质监"><a href="#江宁质监" class="headerlink" title="江宁质监"></a>江宁质监</h6><hr>
+<h6 id="4-6-周二"><a href="#4-6-周二" class="headerlink" title="4-6 周二"></a>4-6 周二</h6><ul>
+<li><input disabled="" type="checkbox"> 档案编辑与审核页面，抽查巡查与整改需要分开展示，每条记录一行，分别进行查看或审核</li>
+<li><input disabled="" type="checkbox"> 申报表内容验证补全</li>
+<li><input checked="" disabled="" type="checkbox"> 验收安排bug：进入后默认选择的科室综合科，实际应该是项目被分配的科室</li>
+<li><input checked="" disabled="" type="checkbox"> 江宁质监项目数据重新导入</li>
+</ul>
+<hr>
+<h6 id="4-7-周三"><a href="#4-7-周三" class="headerlink" title="4-7 周三"></a>4-7 周三</h6><h6 id="房产评估："><a href="#房产评估：" class="headerlink" title="房产评估："></a>房产评估：</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 取时间段内的中位数，使得中位数大概在中间位置，纵轴每段的差为2000</li>
+<li><input checked="" disabled="" type="checkbox"> 审核时确定按钮改为“通过”</li>
+<li><input checked="" disabled="" type="checkbox"> 预评估和正式评估的报告编号，预评估报告，选择初审人，三个字段后加“：”，报告人自初审不用加粗</li>
+<li><input checked="" disabled="" type="checkbox"> 归档人没有选项</li>
+<li><input checked="" disabled="" type="checkbox"> 楼盘字典的新增楼盘的提交按钮放在最下面改为取消和确定</li>
+<li><input checked="" disabled="" type="checkbox"> 业务委托-分配里面的是否现场勘查的是和否左对齐；取消和确定按钮居中对齐。分配操作的处理改为对应的按钮名称</li>
+<li><input checked="" disabled="" type="checkbox"> 正式评估提交表单无相应bug</li>
+</ul>
+<h6 id="江宁质监："><a href="#江宁质监：" class="headerlink" title="江宁质监："></a>江宁质监：</h6><ul>
+<li><input disabled="" type="checkbox"> 档案编辑与审核页面，抽查巡查与整改需要分开展示，每条记录一行，分别进行查看或审核(修复唯一约束报错问题)</li>
+</ul>
+<hr>
+<h6 id="4-8-周四"><a href="#4-8-周四" class="headerlink" title="4-8 周四"></a>4-8 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 档案编辑与审核页面，抽查巡查与整改需要分开展示，每条记录一行，分别进行查看或审核</li>
+<li><input disabled="" type="checkbox"> 申报表内容验证补全(形象进度；概况表格后多出一页；勘察单位、设计单位项目经理相关信息；施工单位项目经理、质检员相关信息)</li>
+<li><input checked="" disabled="" type="checkbox"> 房产坐标规则：纵坐标0起始，顶点最大值 * 1.5，step:取整数 </li>
+</ul>
+<hr>
+<h6 id="4-9-周五"><a href="#4-9-周五" class="headerlink" title="4-9 周五"></a>4-9 周五</h6><ul>
+<li><input disabled="" type="checkbox"> word2pdf server</li>
+<li><input checked="" disabled="" type="checkbox"> 申报表内容验证补全(形象进度；概况表格后多出一页；勘察单位、设计单位项目经理相关信息；施工单位项目经理、质检员相关信息)</li>
+<li><input checked="" disabled="" type="checkbox"> 工程报监页面去掉两行重复的表单项</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2021W13"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/03/29/2021W13/"
+    >第13周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/03/29/2021W13/" class="article-date">
+  <time datetime="2021-03-29T08:46:12.000Z" itemprop="datePublished">2021-03-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="房产评估"><a href="#房产评估" class="headerlink" title="房产评估"></a>房产评估</h6><p> <a target="_blank" rel="noopener" href="https://anonymous111.gitee.io/pages/fcpg/">项目收费原型地址</a></p>
+<hr>
+<h6 id="3-29-周一"><a href="#3-29-周一" class="headerlink" title="3-29 周一"></a>3-29 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 登录页下面加，系统开发：淮安纷云软件有限公司</li>
+<li><input checked="" disabled="" type="checkbox"> 项目分配是项目信息前后字不一样大</li>
+<li><input checked="" disabled="" type="checkbox"> 报告审查：驳回放取消位置，驳回位置可以放【返回】按钮<br>备注=&gt;审查意见<br>按钮:驳回，返回交换位置<br>按钮右对齐<br>Pageoffice修订模式修改<br>审核l流程新增 评估报告项</li>
+<li><input checked="" disabled="" type="checkbox"> 历史记录上传图片改为：查勘资料，查勘实际完成时间：查勘时间</li>
+<li><input checked="" disabled="" type="checkbox"> 添加、管理印章(不使用电子印章)</li>
+<li><input checked="" disabled="" type="checkbox"> 标题：项目收费<br>列表加序号、倒排序<br>查询只保留一行，房产名称，委托人、联系人、手机号</li>
+<li><input checked="" disabled="" type="checkbox"> 错误提示：不能什么样的错误都是开小差。（提示文字）<br>建议取消开小差网络语</li>
+<li><input checked="" disabled="" type="checkbox"> 收取费用：默认所有应该收取的费用，如果全部减免了，因该流程结束了。</li>
+<li><input checked="" disabled="" type="checkbox"> 所有费用收结束了，该怎么办。退出这个页面后，进不来了，收费查询页面不能做任何操作</li>
+<li><input checked="" disabled="" type="checkbox"> 收取费用和开票额：因该默认为未收取费用,该页面有缓存，必须处理</li>
+<li><input checked="" disabled="" type="checkbox"> 项目查询添加序号、名称左对齐，操作不需要那么宽</li>
+</ul>
+<hr>
+<h6 id="3-30-周二"><a href="#3-30-周二" class="headerlink" title="3-30 周二"></a>3-30 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 以下页面按钮栏宽度，状态栏居中调整：角色管理、等级管理、资产管理、员工管理</li>
+<li><input checked="" disabled="" type="checkbox"> 易耗品、资产新增修改弹窗</li>
+<li><input checked="" disabled="" type="checkbox"> 获取各流程节点用户列表bug修复</li>
+<li><input checked="" disabled="" type="checkbox"> 系统用户重新开发</li>
+<li><input disabled="" type="checkbox"> 组织机构重新开发（部分完成）</li>
+</ul>
+<hr>
+<h6 id="3-31-周三"><a href="#3-31-周三" class="headerlink" title="3-31 周三"></a>3-31 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 房价监测的纵坐标区间为0~最大值还多两千；时间筛选默认是一个月，三个月，六个月和自定义（自定义是选择起始的年月）；涉及具体小区的折线图，显示小区和所在区的房价折线图这两条折线；同比改为环比</li>
+<li><input checked="" disabled="" type="checkbox"> 基础数据的上传按钮和面包屑一个层级</li>
+<li><input checked="" disabled="" type="checkbox"> 租赁案例的导入新案例和面包屑放一个层级,交易案例导出查询结果放查询按钮后</li>
+<li><input checked="" disabled="" type="checkbox"> 项目查询的列表样式和业务委托一致；详情放在最前面</li>
+<li><input checked="" disabled="" type="checkbox"> 评估报告的筛选查询左对齐，导出的两个按钮放查询右侧</li>
+<li><input disabled="" type="checkbox"> 江宁质量监督客户端工程报验功能，详见原型页面（跟陆凯珍任务重复）</li>
+<li><input checked="" disabled="" type="checkbox"> 临时处理江宁审图一位建设单位用户无法正常企业微信登录的问腿。原因：该用户的手机号被其他人在建设单位端占用</li>
+<li><input checked="" disabled="" type="checkbox"> 登录页背景替换</li>
+</ul>
+<h6 id="4-1-周四"><a href="#4-1-周四" class="headerlink" title="4-1 周四"></a>4-1 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 楼盘字典的新增楼盘的提交按钮放在最下面改为取消和确定</li>
+<li><input checked="" disabled="" type="checkbox"> 归档人和按钮样式排版</li>
+<li><input checked="" disabled="" type="checkbox"> 预评估和正式评估价报告编号样式排版</li>
+<li><input checked="" disabled="" type="checkbox"> 业务列表-查勘，查勘的模块内容居中，图片上传的入口左对齐</li>
+<li><input checked="" disabled="" type="checkbox"> 业务委托-分配里面的是否现场勘查的是和否左对齐；分配操作的处理改为对应的按钮名称</li>
+<li><input checked="" disabled="" type="checkbox"> 项目信息编辑，房屋面积和土地面积的提示文案左对齐</li>
+<li><input checked="" disabled="" type="checkbox"> 员工管理档案信息图片上传404处理</li>
+</ul>
+<hr>
+<h5 id="4-2-周五"><a href="#4-2-周五" class="headerlink" title="4-2 周五"></a>4-2 周五</h5><ul>
+<li><p><input checked="" disabled="" type="checkbox">  处理里面的项目信息的创建时间对齐</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  新增业务，业务来源的银行改为单位，委托银行改为委托单位。取消和提交按钮居中</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  交易案例的列表表头修改为下图<br><img src="/images/9086300d74a73a613d273f38cb92e1c1.png"></p>
+</li>
+<li><p><input disabled="" type="checkbox">  档案编辑与审核页面，抽查巡查与整改需要分开展示，每条记录一行，分别进行查看或审核</p>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-JS八张思维导图"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/03/26/JS%E5%85%AB%E5%BC%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"
+    >JS八张思维导图</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/03/26/JS%E5%85%AB%E5%BC%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" class="article-date">
+  <time datetime="2021-03-25T16:03:44.000Z" itemprop="datePublished">2021-03-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B/">计算机编程</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h4 id="1-JS基本概念"><a href="#1-JS基本概念" class="headerlink" title="1. JS基本概念"></a>1. JS基本概念</h4><p><img src="/blog/images/690443-20180125105946600-807277281.png"></p>
+<h4 id="2-JS操作符"><a href="#2-JS操作符" class="headerlink" title="2. JS操作符"></a>2. JS操作符</h4><p><img src="/blog/images/690443-20180125110035053-1062793248.png"></p>
+<h4 id="3-JS基本语句"><a href="#3-JS基本语句" class="headerlink" title="3. JS基本语句"></a>3. JS基本语句</h4><p><img src="/blog/images/690443-20180125110103225-2075947909.png"></p>
+<h4 id="4-JS数组用法"><a href="#4-JS数组用法" class="headerlink" title="4. JS数组用法"></a>4. JS数组用法</h4><p><img src="/blog/images/690443-20180125110123365-732430445.png"></p>
+<h4 id="5-Date用法"><a href="#5-Date用法" class="headerlink" title="5. Date用法"></a>5. Date用法</h4><p><img src="/blog/images/690443-20180125110149084-1391215200.png"></p>
+<h4 id="6-JS字符串用法"><a href="#6-JS字符串用法" class="headerlink" title="6. JS字符串用法"></a>6. JS字符串用法</h4><p><img src="/blog/images/690443-20180125110220459-1298862204.png"></p>
+<h4 id="7-JS编程风格"><a href="#7-JS编程风格" class="headerlink" title="7. JS编程风格"></a>7. JS编程风格</h4><p><img src="/blog/images/690443-20180125110245897-473277034.png"></p>
+<h4 id="8-JS编程实践"><a href="#8-JS编程实践" class="headerlink" title="8. JS编程实践"></a>8. JS编程实践</h4><p><img src="/blog/images/690443-20180125110306569-173187469.png"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/js/" rel="tag">js</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-mysql数据库迁移"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/03/25/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/"
+    >mysql数据库迁移</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/03/25/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/" class="article-date">
+  <time datetime="2021-03-25T15:44:29.000Z" itemprop="datePublished">2021-03-25</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BF%90%E7%BB%B4/">计算机运维</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="迁移条件"><a href="#迁移条件" class="headerlink" title="迁移条件"></a>迁移条件</h5><p>必须版本统一,例如8.0与5.0之间会报错</p>
+<h5 id="迁移步骤"><a href="#迁移步骤" class="headerlink" title="迁移步骤"></a>迁移步骤</h5><p> MySQL默认的数据文件存储目录为/var/lib/mysql。假如要把目录移到/home/data下需要进行下面几步： </p>
+<ol>
+<li><p><strong>opt目录下建立data目录</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　　 cd &#x2F;opt </span><br><span class="line">　　 mkdir mysql_rpm_5612&#x2F;data&#x2F;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>把MySQL服务进程停掉</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　 mysqladmin -u root -p shutdown </span><br></pre></td></tr></table></figure></li>
+<li><p><strong>把/var/lib/mysql整个目录移到/opt/mysql_rpm_5612/data/</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv &#x2F;var&#x2F;lib&#x2F;mysql　&#x2F;opt&#x2F;mysql_rpm_5612&#x2F;data&#x2F;</span><br></pre></td></tr></table></figure>
+<p>这样就把MySQL的数据文件移动到了/home/data/mysql下 </p>
+</li>
+<li><p><strong>找到my.cnf配置文件</strong><br>　　 如果/etc/目录下没有my.cnf配置文件，请到/usr/share/mysql/下找到*.cnf文件，拷贝其中一个到/etc/并改名为my.cnf)中。命令如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　 [root@test1 mysql]# cp &#x2F;usr&#x2F;share&#x2F;mysql&#x2F;my-medium.cnf　&#x2F;etc&#x2F;my.cnf </span><br></pre></td></tr></table></figure></li>
+<li><p><strong>编辑MySQL的配置文件/etc/my.cnf</strong><br>　　 为保证MySQL能够正常工作，需要指明mysql.sock文件的产生位置。修改socket=/var/lib/mysql/mysql.sock一行中等号右边的值为：/home/mysql/mysql.sock 。操作如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　　 vi　 my.cnf　　　 (用vi工具编辑my.cnf文件，找到下列数据修改之) </span><br><span class="line">　　 # The MySQL server </span><br><span class="line">　　　 [mysqld] </span><br><span class="line">　　　 port　　　&#x3D; 3306 </span><br><span class="line">　　　 #socket　 &#x3D; &#x2F;var&#x2F;lib&#x2F;mysql&#x2F;mysql.sock（原内容，为了更稳妥用“#”注释此行） </span><br><span class="line">　　　 socket　 &#x3D; &#x2F;opt&#x2F;mysql_rpm_5612&#x2F;data&#x2F;&#x2F;mysql&#x2F;mysql.sock　　　（加上此行） </span><br></pre></td></tr></table></figure></li>
+<li><p><strong>修改MySQL启动脚本/etc/rc.d/init.d/mysql</strong><br>　　 最后，需要修改MySQL启动脚本/etc/rc.d/init.d/mysql，把其中datadir=/var/lib/mysql一行中，等号右边的路径改成你现在的实际存放路径：home/data/mysql。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@test1 etc]# vi　&#x2F;etc&#x2F;rc.d&#x2F;init.d&#x2F;mysql </span><br><span class="line">　　 #datadir&#x3D;&#x2F;var&#x2F;lib&#x2F;mysql　　　　（注释此行） </span><br><span class="line">　　 datadir&#x3D;&#x2F;opt&#x2F;mysql_rpm_5612&#x2F;data&#x2F;&#x2F;mysql　　 （加上此行） </span><br></pre></td></tr></table></figure></li>
+<li><p><strong>重新启动MySQL服务</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;rc.d&#x2F;init.d&#x2F;mysql　start </span><br></pre></td></tr></table></figure>
+<p>　　 或用reboot命令重启Linux<br>　　 如果工作正常移动就成功了，否则对照前面的7步再检查一下</p>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/database/" rel="tag">database</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2021W12"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/03/22/2021W12/"
+    >第12周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/03/22/2021W12/" class="article-date">
+  <time datetime="2021-03-22T03:35:05.000Z" itemprop="datePublished">2021-03-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="房产评估"><a href="#房产评估" class="headerlink" title="房产评估"></a>房产评估</h6><p><a target="_blank" rel="noopener" href="https://anonymous111.gitee.io/pages/fcpg/">项目收费原型地址</a></p>
+<hr>
+<h6 id="3-22-周一"><a href="#3-22-周一" class="headerlink" title="3-22 周一"></a>3-22 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 当前收费情况，修改总费用与减免费用一起提交</li>
+<li><input disabled="" type="checkbox"> 员工管理(完成后台接口，前端组织树组件及样式)</li>
+</ul>
+<hr>
+<h6 id="3-23-周二"><a href="#3-23-周二" class="headerlink" title="3-23 周二"></a>3-23 周二</h6><ul>
+<li><input disabled="" type="checkbox"> 员工管理：增删改查</li>
+<li><input disabled="" type="checkbox"> 江宁质监站长审核bug处理</li>
+</ul>
+<hr>
+<h6 id="3-24-周三"><a href="#3-24-周三" class="headerlink" title="3-24  周三"></a>3-24  周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 员工管理：新增员工表单：入公司情况、档案情况。员工信息修改，员工信息详情展示。树形组件上增删改查操作</li>
+<li><input disabled="" type="checkbox"> 固定资产 批量导入功能</li>
+<li><input checked="" disabled="" type="checkbox"> 发布新版本</li>
+</ul>
+<hr>
+<h6 id="3-25-周四"><a href="#3-25-周四" class="headerlink" title="3-25  周四"></a>3-25  周四</h6><ul>
+<li><input disabled="" type="checkbox"> 检查一下生成的申报表内容。存在部分内容已填写，但是申报表中未将内容代入的bug</li>
+<li><input checked="" disabled="" type="checkbox"> 项目信息填写里，增加“经办人”和“经办人联系电话”</li>
+<li><input checked="" disabled="" type="checkbox"> 项目信息填写时，在人防材料里，再增加一项“人防监理单位资质证书”</li>
+<li><input checked="" disabled="" type="checkbox"> 固定资产 批量导入功能</li>
+</ul>
+<hr>
+<h6 id="3-26-周五"><a href="#3-26-周五" class="headerlink" title="3-26  周五"></a>3-26  周五</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 检查一下生成的申报表内容。</li>
+<li><input checked="" disabled="" type="checkbox"> 总体样式调整，风格统一</li>
+<li><input checked="" disabled="" type="checkbox"> 评估电子签章功能修改</li>
+<li><input checked="" disabled="" type="checkbox"> 评估报告编号输入</li>
+<li><input checked="" disabled="" type="checkbox"> 所有操作栏左对齐</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2021W11"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/03/15/2021W11/"
+    >第11周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/03/15/2021W11/" class="article-date">
+  <time datetime="2021-03-15T03:34:41.000Z" itemprop="datePublished">2021-03-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="房产评估"><a href="#房产评估" class="headerlink" title="房产评估"></a>房产评估</h6><p>项目收费原型地址： <a target="_blank" rel="noopener" href="https://anonymous111.gitee.io/pages/fcpg/">https://axhub.im/pro/dd4ceb7d25fcca38</a></p>
+<hr>
+<h6 id="3-15-周一"><a href="#3-15-周一" class="headerlink" title="3-15 周一"></a>3-15 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 发布江宁质监</li>
+<li><input checked="" disabled="" type="checkbox"> 项目报监环节增加绿色建筑相关内容，如表</li>
+<li><input checked="" disabled="" type="checkbox"> 登记管理中，增加登记意见修改的功能，可改验收的信息，例如修改通过为不通过</li>
+<li><input checked="" disabled="" type="checkbox"> 房产评估短会</li>
+</ul>
+<hr>
+<h6 id="3-16-周二"><a href="#3-16-周二" class="headerlink" title="3-16 周二"></a>3-16 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 项目报监环节增加绿色建筑相关内容，如表。重新打开：字段名称和单位有问题</li>
+<li><input checked="" disabled="" type="checkbox"> 监督申报表内容根据新增的人防信息、绿色节能信息，更新申报表模板内容</li>
+<li><input checked="" disabled="" type="checkbox"> 工程报监新增人防工程遗漏的几个字段</li>
+<li><input disabled="" type="checkbox"> 资产管理-固定资产，增删改查（弄不完)</li>
+</ul>
+<hr>
+<h6 id="3-17-周三"><a href="#3-17-周三" class="headerlink" title="3-17 周三"></a>3-17 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 资产管理-固定资产，增删改查</li>
+<li><input checked="" disabled="" type="checkbox"> 业务委托的状态标签都去掉，只留下待办项目和流程追踪，处理文字对应修改，处理里面的页面将处理内容放在最上面</li>
+</ul>
+<hr>
+<h6 id="3-18-周四"><a href="#3-18-周四" class="headerlink" title="3-18 周四"></a>3-18 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 资产管理-易耗品，增删改查及出入库</li>
+<li><input checked="" disabled="" type="checkbox"> 项目报监环节增加绿色建筑相关内容，如表（重新打开，改文字）</li>
+<li><input checked="" disabled="" type="checkbox"> 科室审核巡查记录系统一直缓冲</li>
+</ul>
+<hr>
+<h6 id="3-19-周五"><a href="#3-19-周五" class="headerlink" title="3-19 周五"></a>3-19 周五</h6><ul>
+<li><p><input checked="" disabled="" type="checkbox">  评估登录页设计</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  新增业务查询的列表，将作废删除操作放入，显示全部项目</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  项目更新通知功能重新设计实现</p>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2021W10"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/03/08/2021W10/"
+    >第10周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/03/08/2021W10/" class="article-date">
+  <time datetime="2021-03-08T03:34:08.000Z" itemprop="datePublished">2021-03-08</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="房产评估"><a href="#房产评估" class="headerlink" title="房产评估"></a>房产评估</h6><p>项目收费原型地址： <a target="_blank" rel="noopener" href="https://axhub.im/pro/a731b2c816af0396">https://axhub.im/pro/dd4ceb7d25fcca38</a></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 业务列表中去掉项目编号，创建时间,房产名称采用拼接方式。小区名+楼栋号+房间号</li>
+<li><input checked="" disabled="" type="checkbox"> 评估报告，报表下载。进入后使用默认日期范围直接查询展示数据</li>
+<li><input checked="" disabled="" type="checkbox"> 历史记录。相关字段无数据的使用‘–’代替</li>
+<li><input checked="" disabled="" type="checkbox"> 对话框标题样式调整(增加装饰线)</li>
+<li><input checked="" disabled="" type="checkbox"> 盖章页面优化</li>
+<li><input checked="" disabled="" type="checkbox"> 初审对话框，checkbox改单选按钮</li>
+<li><input checked="" disabled="" type="checkbox"> 交易案例：优化后台方案，取消对数据量的限制</li>
+<li><input disabled="" type="checkbox"> 淡化作废操作，去除列表与处理页面中的作废按钮。重新增加一个项目管理菜单，在此菜单中进行作废、删除项目等操作。</li>
+<li><input checked="" disabled="" type="checkbox"> 系统名称统一，包括title，bannar，登录页等。名称为：房地产估价机构服务平台管理系统</li>
+<li><input disabled="" type="checkbox"> 处理操作：处理按钮的名称、处理页面弹框表单改为页面直接表单</li>
+</ul>
+<hr>
+<h6 id="3-8-周一"><a href="#3-8-周一" class="headerlink" title="3-8 周一"></a>3-8 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 业务列表中去掉项目编号，创建时间,房产名称采用拼接方式。小区名+楼栋号+房间号</li>
+<li><input checked="" disabled="" type="checkbox"> 评估报告，报表下载。进入后使用默认日期范围直接查询展示数据</li>
+<li><input checked="" disabled="" type="checkbox"> 历史记录。相关字段无数据的使用‘–’代替</li>
+<li><input checked="" disabled="" type="checkbox"> 对话框标题样式调整(增加装饰线)</li>
+<li><input checked="" disabled="" type="checkbox"> 系统名称统一，包括title，bannar，登录页等。名称为：房地产估价机构服务平台管理系统</li>
+</ul>
+<hr>
+<h6 id="3-9-周二"><a href="#3-9-周二" class="headerlink" title="3-9 周二"></a>3-9 周二</h6><ul>
+<li><input disabled="" type="checkbox"> 盖章页面优化</li>
+<li><input checked="" disabled="" type="checkbox"> 初审对话框，checkbox改单选按钮</li>
+<li><input checked="" disabled="" type="checkbox"> 交易案例：优化后台方案，取消对数据量的限制</li>
+</ul>
+<p>keep-alive中的组件： router params、querys变换而来的props属性必须可以undefined，否则会报错</p>
+<hr>
+<h6 id="3-10-周三"><a href="#3-10-周三" class="headerlink" title="3-10 周三"></a>3-10 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 盖章页面优化</li>
+<li><input checked="" disabled="" type="checkbox"> 房产评估TAPD整理录入(整理完，待陈浩录入)</li>
+<li><input checked="" disabled="" type="checkbox"> 审图系统建设单位审核通过后删除重新注册，造成人员无法登录的问题</li>
+<li><input disabled="" type="checkbox"> 蓄淋水申请里，将“计划抽查日期”—&gt;“计划实施时间”，时间插件为为区间，增加联系人，联系人电话</li>
+</ul>
+<p>待开发页面：</p>
+<ol>
+<li>项目收费<blockquote>
+<p>收费</p>
+</blockquote>
+</li>
+<li>收费查询</li>
+<li>员工管理<blockquote>
+<p>新增员工基本情况<br>入公司情况<br>档案信息<br>查看详情</p>
+</blockquote>
+</li>
+<li>资产管理-固定资产<blockquote>
+<p>新增资产</p>
+</blockquote>
+</li>
+<li>资产管理-易耗品<blockquote>
+<p>新增易耗品</p>
+</blockquote>
+</li>
+</ol>
+<p> 待修改内容：</p>
+<ol>
+<li> 处理按钮的名称、处理页面弹框表单改为页面直接表单</li>
+<li>淡化作废操作，去除列表与处理页面中的作废按钮。重新增加一个项目管理菜单，在此菜单中进行作废、删除项目等操作。<br>3、项目收费：如果当前项目尚未设置总费用，进入时自动弹出窗口让用户设置总费用</li>
+</ol>
+<hr>
+<h6 id="3-11-周四"><a href="#3-11-周四" class="headerlink" title="3-11 周四"></a>3-11 周四</h6><p>房产评估</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 项目收费</li>
+<li><input checked="" disabled="" type="checkbox"> 收费表单</li>
+<li><input disabled="" type="checkbox"> 收费查询<br>江宁质监：</li>
+<li><input checked="" disabled="" type="checkbox"> 蓄淋水申请里，将“计划抽查日期”—&gt;“计划实施时间”，时间插件为为区间，增加联系人，联系人电话</li>
+<li><input disabled="" type="checkbox"> 整改通知单模板里，在选择通病带入文档后，每条违反了前面加逗号“，”，最后加分号“；”</li>
+</ul>
+<hr>
+<h6 id="3-12-周五"><a href="#3-12-周五" class="headerlink" title="3-12 周五"></a>3-12 周五</h6><p>房产评估</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 发布新版本，处理发布发现的问题</li>
+<li><input checked="" disabled="" type="checkbox"> 收费查询页面开发</li>
+<li><input disabled="" type="checkbox"> 资产管理-固定资产页面开发(部分)</li>
+</ul>
+<hr>
+<h6 id="3-13-周六"><a href="#3-13-周六" class="headerlink" title="3-13 周六"></a>3-13 周六</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 整改通知单模板里，在选择通病带入文档后，每条违反了前面加逗号“，”，最后加分号“；”</li>
+<li><input checked="" disabled="" type="checkbox"> 监督巡查（抽查）关联通病的列表，增加一列“违反/不符合”，当通病为违反了时，序号做红色显示</li>
+<li><input checked="" disabled="" type="checkbox"> 监督巡查（抽查）的文档格式，最下一栏四单位签字栏，做成两行，一行两家单位</li>
+<li><input checked="" disabled="" type="checkbox"> 监督巡查中，监督记录的编号以项目为单位，每个项目都从0001号起编制</li>
+<li><input checked="" disabled="" type="checkbox"> 监督计划预设的内容中，增加人防计划相关内容</li>
+<li><input checked="" disabled="" type="checkbox"> 工程报监时，增加人防相关内容。</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2021W09"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/03/01/2021W09/"
+    >第9周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/03/01/2021W09/" class="article-date">
+  <time datetime="2021-03-01T03:33:27.000Z" itemprop="datePublished">2021-03-01</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="江宁质监"><a href="#江宁质监" class="headerlink" title="江宁质监"></a>江宁质监</h6><p>蓄淋水原型地址： [<a target="_blank" rel="noopener" href="https://axhub.im/ax9/d557d29d26ccb156]">https://axhub.im/ax9/d557d29d26ccb156]</a></p>
+<hr>
+<h6 id="3-1-周一"><a href="#3-1-周一" class="headerlink" title="3-1 周一"></a>3-1 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 报监通过后，生成的报审表问题如下。2个字段未填入</li>
+<li><input checked="" disabled="" type="checkbox"> 验收安排后，需短信通知甲方，验收时间，不可查看验收人员信息(短信未发送bug)</li>
+<li><input checked="" disabled="" type="checkbox"> 添加巡查（抽查）时，转为整改通知操作，提交后显示成功，其实没有成功</li>
+<li><input disabled="" type="checkbox"> 蓄淋水抽查：字段内容：工程进度（主体、竣工验收前检查）；监督日期、要求抽检日期、工作安排、抽查部位、蓄水情况（符合or不符合）、渗漏情况（发现or未发现）、当为发现时，需手输发现位置</li>
+<li><input checked="" disabled="" type="checkbox"> 建设单位新增“质监档案材料补充”菜单(不限制材料可选项，即所有材料都可退回让建设单位补充)</li>
+<li><input checked="" disabled="" type="checkbox"> 清软房地产评估业务系统软件V1.0</li>
+</ul>
+<hr>
+<h6 id="3-2-周二"><a href="#3-2-周二" class="headerlink" title="3-2 周二"></a>3-2 周二</h6><ul>
+<li><input disabled="" type="checkbox"> 蓄淋水抽查 ：完成建设单位端申请，主管部门查看申请列表、申请详情，主管部门提交抽查记录。 剩余：主管部门提交后生成监督文档，设计单位端查看监督文档，建设单位端对不合格记录重新提交。</li>
+<li><input checked="" disabled="" type="checkbox"> 解决江宁审图系统运行中出现的设计单位用户对应多单位，其中一个单位被删除后无法获取最新项目的问题</li>
+</ul>
+<hr>
+<h6 id="3-3-周三"><a href="#3-3-周三" class="headerlink" title="3-3 周三"></a>3-3 周三</h6><p>蓄淋水：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 主管部门提交后生成监督文档</li>
+<li><input disabled="" type="checkbox"> 设计单位端查看监督文档</li>
+<li><input checked="" disabled="" type="checkbox"> 建设单位端对不合格记录重新提交</li>
+</ul>
+<hr>
+<h6 id="3-4-周四"><a href="#3-4-周四" class="headerlink" title="3-4 周四"></a>3-4 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 蓄淋水 设计单位端查看监督文档</li>
+<li><input checked="" disabled="" type="checkbox"> 房产评估导入bug处理</li>
+<li>[x]江宁质监系统最新版本发布 </li>
+</ul>
+<hr>
+<h6 id="3-5-周五"><a href="#3-5-周五" class="headerlink" title="3-5 周五"></a>3-5 周五</h6><p>房产评估系统：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 业务列表中去掉项目编号，创建时间,房产名称采用拼接方式。小区名+楼栋号+房间号</li>
+<li><input checked="" disabled="" type="checkbox"> 弹窗、浮窗关闭bug</li>
+<li><input checked="" disabled="" type="checkbox"> 估价工具选择交易案例组件不报错不显示bug处理。发现并修复列表中小区名称未显示的bug</li>
+<li><input checked="" disabled="" type="checkbox"> 与客户确认调整方案</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2021W08"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/02/22/2021W08/"
+    >第8周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/02/22/2021W08/" class="article-date">
+  <time datetime="2021-02-22T03:30:16.000Z" itemprop="datePublished">2021-02-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="江宁质监"><a href="#江宁质监" class="headerlink" title="江宁质监"></a>江宁质监</h6><p>蓄淋水原型地址： <a target="_blank" rel="noopener" href="https://axhub.im/ax9/d557d29d26ccb156">https://axhub.im/ax9/d557d29d26ccb156</a></p>
+<ol>
+<li><input disabled="" type="checkbox"> 蓄淋水抽查：字段内容：工程进度（主体、竣工验收前检查）；监督日期、要求抽检日期、工作安排、抽查部位、抽查结果（渗漏or不渗漏），渗漏则需要手输内容</li>
+<li><input disabled="" type="checkbox"> 材料抽检：参考抽检通知书的形式</li>
+<li><input disabled="" type="checkbox"> 甲方报检验批，关键节点，必须进行日常安排，考虑如何加入到系统中</li>
+<li><input disabled="" type="checkbox"> 档案编号规则：20210001</li>
+<li><input disabled="" type="checkbox"> 在站长审核之前，监督报告打印时，都增加水印，水印不可去除</li>
+<li><input disabled="" type="checkbox"> 验收记录模板更新（待综合科提供）</li>
+<li><input disabled="" type="checkbox"> 所有巡查记录，格式中增加联系电话，且只有在审核通过后，才可将公章盖上，部分巡查就记录使用业务章（待提供）</li>
+<li><input disabled="" type="checkbox"> 抽查（巡查）模板调整，中间通病内容高度固定，超出部分新增一页，将中间表格描边去除，详细看模板</li>
+<li><input disabled="" type="checkbox"> 建设单位新增“质监档案材料补充”菜单</li>
+</ol>
+<hr>
+<h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a><strong>清华评估先河</strong></h6><ul>
+<li><input disabled="" type="checkbox"> 加入绩效管理，根据绩效算法进行计算呈现</li>
+<li><input disabled="" type="checkbox"> 接入合同管理系统</li>
+<li><input disabled="" type="checkbox"> 加入资产管理</li>
+<li><input disabled="" type="checkbox"> 房产评估签名盖章报错问题</li>
+</ul>
+<hr>
+<h6 id="2-22-周一"><a href="#2-22-周一" class="headerlink" title="2-22 周一"></a>2-22 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 导入江宁质检项目数据</li>
+<li><input checked="" disabled="" type="checkbox"> 项目删除功能</li>
+</ul>
+<hr>
+<h6 id="2-23-周二"><a href="#2-23-周二" class="headerlink" title="2-23 周二"></a>2-23 周二</h6><ul>
+<li><input disabled="" type="checkbox"> 抽查（巡查）模板调整，中间通病内容高度固定，超出部分新增一页，将中间表格描边去除，详细看模板</li>
+<li><input checked="" disabled="" type="checkbox"> 地基类型、基础类型、桩类型选项维护（待王站整理提供）</li>
+<li><input checked="" disabled="" type="checkbox"> 整改回复涉及到强条时，应进行逐条回复</li>
+<li><input checked="" disabled="" type="checkbox">  验收安排后，需短信通知甲方，验收时间，不可查看验收人员信息</li>
+<li><input checked="" disabled="" type="checkbox">  建设单位注册，去掉资质3项内容，增加经办人</li>
+<li><input checked="" disabled="" type="checkbox">  建设单位重置密码功能</li>
+</ul>
+<hr>
+<h6 id="2-24-周三"><a href="#2-24-周三" class="headerlink" title="2-24 周三"></a>2-24 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 抽查（巡查）模板调整，中间通病内容高度固定，超出部分新增一页，将中间表格描边去除，详细看模板</li>
+<li><input checked="" disabled="" type="checkbox"> 巡查中的“确认回复”按钮改成“审核”</li>
+<li><input checked="" disabled="" type="checkbox"> 代管项目前面的编号D改成DG</li>
+<li><input checked="" disabled="" type="checkbox"> 报监信息中，将“项目编号”改成“立项项目编号”</li>
+<li><input checked="" disabled="" type="checkbox"> 工程报监时，市政工程字段填写调整</li>
+<li><input checked="" disabled="" type="checkbox"> 解决输入框限制为数字类型时，有时候导致无法输入的问题</li>
+</ul>
+<hr>
+<h6 id="2-25-周四"><a href="#2-25-周四" class="headerlink" title="2-25 周四"></a>2-25 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 登记管理菜单里，无法查看历史已登记的项目情况</li>
+<li><input checked="" disabled="" type="checkbox"> 监督计划文档需将工程名称，签名内容，附加选项带入文档中</li>
+<li><input checked="" disabled="" type="checkbox"> 档案初审，监督档案列表不全，还有部分内容未展示，其次内控标准，只可以操作最下面档案预审符合要求，不显示后两列</li>
+<li><input checked="" disabled="" type="checkbox"> 代管临时编号处理</li>
+<li><input checked="" disabled="" type="checkbox"> 删除 项目时同时删除筑业系统中的项目</li>
+<li><input checked="" disabled="" type="checkbox"> 解决验收处理无法不通过的问题</li>
+</ul>
+<hr>
+<h6 id="2-26-周五"><a href="#2-26-周五" class="headerlink" title="2-26 周五"></a>2-26 周五</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 报监通过后，生成的报审表问题如下</li>
+<li><input checked="" disabled="" type="checkbox"> 验收记录模板更新（待综合科提供）</li>
+<li><input checked="" disabled="" type="checkbox"> 最新版本发布</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/12/">12</a><a class="extend next" rel="next" href="/blog/page/2/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Meme
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="/blog/images/ayer-side.svg" alt="我说"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/blog/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/blog/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+
+    
+  </div>
+</body>
+
+</html>

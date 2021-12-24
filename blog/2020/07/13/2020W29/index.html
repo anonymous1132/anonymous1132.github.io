@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="博客 技术 编程 code program" />
+   
+  <meta name="description" content="个人博客" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    第29周工作内容 |  我说
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/blog/dist/main.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-2020W29"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  第29周工作内容
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/07/13/2020W29/" class="article-date">
+  <time datetime="2020-07-13T02:01:15.000Z" itemprop="datePublished">2020-07-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">6 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="7-13-周一"><a href="#7-13-周一" class="headerlink" title="7-13 周一"></a>7-13 周一</h6><p>1、申报材料维护好类别<br>2、附件上传用统一样式，可以删除查看<br>3、建设单位端的适配问题<br>4、一键发布功能</p>
+<h6 id="7-14-周二"><a href="#7-14-周二" class="headerlink" title="7-14 周二"></a>7-14 周二</h6><p>1、组织机构排序功能<br>2、通病库字典样式调整修改</p>
+<h6 id="7-15-周三"><a href="#7-15-周三" class="headerlink" title="7-15 周三"></a>7-15 周三</h6><p>1、五方主体维护地方，建设单位没有显示，在新增一方后才显示<br>2、申报材料没有保存之前，不可上传<br>3、监督计划签章失败<br>4、下发给建设单位的材料转pdf<br>5、验收申报页面，列表排序根据监督注册号倒序排列<br>6、数据字典树形控件加滚动条<br>7、验收竣工申请页面，文件上传模式修改<br>8、竣工验收申请页面修改</p>
+<h6 id="7-16-周四"><a href="#7-16-周四" class="headerlink" title="7-16 周四"></a>7-16 周四</h6><p>1、建设单位竣工验收申请修改<br>2、房产评估系统需求整理，准备与客户对接<br>3、房产评估系统 项目分配：分配查勘与评估人员【查勘环节非必须，可不分配勘察人】</p>
+<h6 id="7-17-周五"><a href="#7-17-周五" class="headerlink" title="7-17 周五"></a>7-17 周五</h6><p>1、评估系统业务表结构修改，业务代码调整。<br>2、用江宁质监开发经验修改评估前端整体性插件配置、后台filter</p>
+<hr>
+<p>评估行业综合办公系统开发</p>
+<p>1． 业务管理（首先需要重新做的部分，当前流程：<br>项目登记=》项目分配=》现场踏勘=》评估作业=》初审=》二审=》终审=》盖章=》归档=》生成财务流程=》财务收费=》收费完成<br>项目查询中可进行报废。<br>需用户明确操作流程<br>）</p>
+<p>评估流程：</p>
+<p>（1）项目登记：记录项目基本信息。提供批量导入excel功能。</p>
+<p>（2）项目分配：分配查勘与评估人员【查勘环节非必须，可不分配勘察人】</p>
+<p>（3）现场查勘：查勘人员实地查勘，并上传照片</p>
+<p>（4）预 评 估：是否必须？预评估有哪些业务逻辑</p>
+<p>（5）正式评估：是否必须，正式评估的业务逻辑</p>
+<p>（6）项目分配：审核</p>
+<p>2． 财务管理</p>
+<p>2.1 收费管理：应收费用、实收费用，开票信息。功能都已完成，需要如何修改需用户沟通</p>
+<p>2.2 绩效管理：（新增功能）</p>
+<p>绩效办法：）<br>1.房地产估价报告标的额50万以下的为1分。<br>2.房地产估价报告标的额50-100万的为2分。<br>3.房地产估价报告标的额100-1000万的为3分。<br>4.房地产估价报告标的额1000万以上为4分。<br>5.土地估价报告不论标的额大小每份5分。<br>6.司法鉴定估价按以上规定的3倍执行。<br>7.审核分值按以上规定的1/4执行。”      </p>
+<p>2.3 报告作废：贷款未成功报告作废。（目前在报告查询页面可以进行报废操作，是否需要更改需确认）</p>
+<p>3． 行政管理</p>
+<p>3.1 客户管理：包括估价级别（估价级别的作用？其他相关信息）</p>
+<p>3.2 设备管理：原固定资产管理</p>
+<p>3.3 用章审批：包括实体章和电子章（新功能，电子章用于哪些地方需要明确）</p>
+<p>3.3 行政事务管理：？？</p>
+<p>4． 文档管理</p>
+<p>4.1 估价档案：</p>
+<p>数据上报：省协会、中房学（按表格导出数据，如何记录哪些上报过，哪些没有上报。）【表格是按报告出具时间上传的，比如1月至12月，预留按时间、按估价目的等方式导出功能】，明确导入表格格式，是否数据到处过就标记为上报过，还是手动对数据进行上报 过标记。</p>
+<p>4.2 合同档案：</p>
+<p>4.3 公司资质：</p>
+<p>4.4 公司文件：（是否将评估系统中产生的文件在此展示，是否有额外的上传下载需求）</p>
+<p>4.5 外部文件：是否上传下载功能？</p>
+<p>4.6 公司制度：只是简单上传文件？与公司文件功能重复</p>
+<p>4.7 公司图书：是否需要？【可以保留，以后估价机构备案等级取消，实行资信评级，可能是考察的内容之一，资信评级讨论稿到群里了】上传下载？也可并入公司文件中</p>
+<p>5． 人力资源管理（新功能）</p>
+<p>5.1 员工信息：</p>
+<p>估价级别：估价师、1A级估价员、1B级估价员、2A级估价员、2B级估价员、3A级估价员、3B级估价员。</p>
+<p>5.2 资质证书：<br>文件上传？与档案管理中的公司资质区别？<br>5.3 劳动合同：<br>文件上传？</p>
+<p>6． 数据中心</p>
+<p>6.1 交易案例： </p>
+<p>交易日期、区属、小区、坐落、建筑面积、成交金额、单价、档案号、备注。（可通过百度地图获取公交、商业等信息）。案例数据获取问题，导入？</p>
+<p>6.2 租赁案例： 导入？</p>
+<p>6.3 基础数据：这里是什么内容？？【包括房地产交易、成本、收益数据，其中交易案例、租赁案例数据量大，上面单独设定模块，其余的成本、收益、基准地价资料数据放在这里，简单说就是为成本法和收益法等其他估价方法服务的数据】<br>数据导入？单独导入还是与交易案例一起导入的？需要确定有哪些字段，字段类型。</p>
+<p>6.4 标准化数据：这里是什么内容？？【标准化数据是指实际成交价按照统一的楼层、朝向、建筑面积、装修标准等进行修正调整后的价格，数据利用起来相对客观、准确】</p>
+<p>6.5 房价监测：这里是什么内容？？【可以在全市范围内，按照板块设定房价监测小区，通过读取交易数据库和标准化数据库中的数据分析房价走势】</p>
+<p>7． 参数设置</p>
+<p>7.1 楼盘字典： 【一般就是小区的基本信息（很多房产网有小区基本信息，建成年代、楼栋数、户数、物业管理、开发商等），开始入库可以是小区，预留自定义楼栋、单元、房号】，从网易房产中抓取189个小区基本信息，如果不够，考虑其他网站抓取补充</p>
+<p>7.2 估价工具：如收益法测算工具 【提供excel表格，写入系统，参数可以自行修改最好】</p>
+<p>7.3 微评估的参数设置也可以放在这里。</p>
+<p>8． 通知公告(新功能，优先级靠后)</p>
+<p>8.1 通知管理： </p>
+<p>8.2 公告管理： </p>
+<p>9． 系统管理（已有功能，修改情况待讨论）</p>
+<p>9.1 用户管理： </p>
+<p>9.2 角色管理： </p>
+<p>9.3 组织机构 ： </p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://caojin.top/blog/2020/07/13/2020W29/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/07/20/2020W30/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            第30周工作内容
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/07/06/2020W28/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">第28周工作内容</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Meme
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="/blog/images/ayer-side.svg" alt="我说"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/blog/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/blog/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/blog/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+
+    
+  </div>
+</body>
+
+</html>

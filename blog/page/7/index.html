@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="博客 技术 编程 code program" />
+   
+  <meta name="description" content="个人博客" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     我说
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/blog/dist/main.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/blog/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/blog/">我说</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['劳逸结合是不错，但也别放松过了头', '无论是冒险还是做生意，机会都稍纵即逝', '耽误太多时间，事情可就做不完了'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-2020W11"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/03/09/2020W11/"
+    >第11周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/03/09/2020W11/" class="article-date">
+  <time datetime="2020-03-09T15:12:35.000Z" itemprop="datePublished">2020-03-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="3-9-周一："><a href="#3-9-周一：" class="headerlink" title="3-9 周一："></a>3-9 周一：</h5><p>1、研究一站式申报与施工图审系统数据对接标准1.2文档（移交给赵昕磊、顾凯珍）<br>2、项目添加所属组织机构属性，工作台、项目查询、项目登记、项目录入中已对UI结果进行组织机构过滤</p>
+<p>系统用户页面进行组织机构过滤</p>
+<h5 id="3-10-周二："><a href="#3-10-周二：" class="headerlink" title="3-10 周二："></a>3-10 周二：</h5><p>1、处理新增组织机构内部错误问题<br>2、组织机构操作右对齐(console.css)<br>3、收费部分 表格部分列宽度设置最小宽<br>4、项目查询页面点击查看后新增窗口，或者返回后仍然进入之前的页面<br>5、项目查询页面分页新增直接跳转到多少页<br>6、发现并修复项目查询归档项目查看盖章文件报错的bug<br>7、系统用户管理，用户所属机构只能选择本1级公司内所有组织机构</p>
+<h5 id="3-11-周三："><a href="#3-11-周三：" class="headerlink" title="3-11 周三："></a>3-11 周三：</h5><p>1、小区管理页面分页新增直接跳转到多少页<br>2、用户管理页面，角色属性可选项改为根据所选的组织机构，只能选当前组织机构及其父组织机构所属的角色属性<br>3、权限管理页面、操作日志页面权限只开放给纷云公司<br>4、系统用户页面只能查看所属公司所有用户改为可查看所属公司及其子公司所有用户<br>5、部署测试卓正签章系统（还没成功）</p>
+<h5 id="3-12周四："><a href="#3-12周四：" class="headerlink" title="3-12周四："></a>3-12周四：</h5><p>1、部署测试卓正签章系统<br>ZoomSealEnt签章使用反馈：<br>a、部署签章系统需要安装mysql（版本&gt;=5.5,配置服务端、客户端字符utf8），tomcat8.5（版本指定）。<br>b、使用自带签章与使用ZoomSealEnt在代码中可以很简单配置，不需要额外的编码工作，可以在应用中随意切换方案。<br>c、设置签章方便。自带签章在导入签章时图片大小需要先通过其他软件修改到适合大小，而且出现各种导入失败的问题。ZoomSealEnt导入签章时图片自适应大小，但是要求图片不能大于一定大小。<br>d、ZoomSealEnt需要买证书，测试版有样章字样，由于每次颁 发证书都是有费用的，因此用户必须在正式生产环境中部署并使用正式序列号注 册激活系统后，才可在系统中正式申请证书，将证书申请文件发送给我公司证书 管理技术人员后，ZoomSealEnterprise 系统不能再随意的进行升级或者迁移等 操作，若因此需要重新申请证书，那么额外产生的证书费用需用户自行承担。如果用户的网络环境是封闭的内部网络，需要额外购买证书。<br>e、支持usbkey方式<br>f、ZoomSealEnt有详细的盖章操作日志，日志可查看盖章的文档内容。</p>
+<h5 id="3-13周五"><a href="#3-13周五" class="headerlink" title="3-13周五:"></a>3-13周五:</h5><p>1、layui Form.js源码修改，解决用户管理页面中角色属性被清除重新获取选项后无法触发必填校验的问题<br>2、modern-jiantou.png</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W07"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/02/10/2020W07/"
+    >第7周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/02/10/2020W07/" class="article-date">
+  <time datetime="2020-02-10T09:14:15.000Z" itemprop="datePublished">2020-02-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h5><ul>
+<li><input disabled="" type="checkbox"> 密码模块修改（放后面做）</li>
+<li><input disabled="" type="checkbox"> 小区维护：考虑将富文本框跟模板下载放到新的页面中去（靠后）</li>
+<li><input disabled="" type="checkbox"> iweboffice、签章 安装控件发布（靠后）</li>
+<li><input checked="" disabled="" type="checkbox"> 使用pageoffice，反馈情况</li>
+<li><input disabled="" type="checkbox"> session过期提示转到登录页面</li>
+<li><input checked="" disabled="" type="checkbox"> 项目录入、项目登记页面对百度地图操作的简化</li>
+<li><input disabled="" type="checkbox"> 图片展示使用缩略图，踏勘现场的图片分类要显示出来</li>
+<li><input disabled="" type="checkbox"> 各节点显示的内容修改(主要是报告文件在各个可编辑节点各保存一份)</li>
+<li><input disabled="" type="checkbox"> 附件下载加认证</li>
+<li><input disabled="" type="checkbox"> 系统设置按钮去掉、重置密码窗口按钮长度样式增长</li>
+<li><input disabled="" type="checkbox"> 新增功能：我的项目、项目统计、财务管理</li>
+</ul>
+<hr>
+<h6 id="2-10-周一"><a href="#2-10-周一" class="headerlink" title="2-10 周一"></a>2-10 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 使用pageoffice，并反馈使用情况<br>共同点：都需要安装插件，都需要弹窗使用第三方浏览器打开来支持不同浏览器下相同的体验<br>优点：自带签章、开发集成更好，不需重新配置安装程序路径。<br>缺点：不支持wps，同时安装wps跟ms office不受影响</li>
+</ul>
+<p><img src="/images/4e5e534087f064eeb22a52e568c00453.png"></p>
+<ul>
+<li><input disabled="" type="checkbox"> 项目录入、项目登记 baidumap控件页面修改</li>
+</ul>
+<h6 id="2-11-周二"><a href="#2-11-周二" class="headerlink" title="2-11 周二"></a>2-11 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 使用pageoffice签章</li>
+<li><input checked="" disabled="" type="checkbox"> 发现项目查询页面节点没能正确显示，查找问题并修复</li>
+<li><input disabled="" type="checkbox"> 项目录入、项目登记 baidumap控件页面修改</li>
+</ul>
+<h6 id="3-5-周四"><a href="#3-5-周四" class="headerlink" title="3-5 周四"></a>3-5 周四</h6><p>项目整体测试，梳理存在的问题，简单问题已经处理完成。依然没有解决的问题：<br>1、IE兼容：项目登记、项目录入依然不兼容IE</p>
+<p>2、盖章时弹窗提示“连接印章服务失败，请检查<a target="_blank" rel="noopener" href="http://157.0.1.213:7777/pageoffice/server.aspx%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%E6%97%B6%E6%88%90%E5%8A%9F%E7%9A%84%E3%80%82%E6%88%91%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%83%A8%E7%BD%B2%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E6%B2%A1%E6%9C%89%E5%87%BA%E7%8E%B0%E8%AF%A5%E5%BC%B9%E7%AA%97%E6%8F%90%E7%A4%BA%E3%80%82%E6%89%93%E7%AE%97%E5%90%8E%E7%BB%AD%E5%AF%BB%E6%B1%82%E5%8D%93%E6%AD%A3%E7%9A%84%E5%B8%AE%E5%8A%A9%E3%80%82">http://157.0.1.213:7777/pageoffice/server.aspx，但是实际操作时成功的。我个人计算机部署的服务环境没有出现该弹窗提示。打算后续寻求卓正的帮助。</a></p>
+<p>3、虽然将组织机构实现可配顶级公司，但是目前项目没有跟公司关联，即如果有多个公司，每个公司应该只能操作本公司的项目。这需要项目跟公司之间管理，在项目登记时应该明确项目的公司属性。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W06"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/02/03/2020W06/"
+    >第6周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/02/03/2020W06/" class="article-date">
+  <time datetime="2020-02-03T09:14:15.000Z" itemprop="datePublished">2020-02-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>本周工作计划：系统测试修改需求</p>
+<p>备忘：<br>1、楼层管理：</p>
+<p>2、session过期提示转到登录页面<br>3、项目录入、项目登记页面对百度地图操作的简化</p>
+<p>2-3 周一<br>1、登录密码(√)<br>2、用户管理、权限管理、角色管理、组织机构管理、估价目的管理、项目类型管理、采光类型管理、户型、装修、朝向：修改、查看、删除按钮放到每一行操作；分页控件显示在表格的右下方；查询按钮样式修改、查询按钮与新增按钮位置互换；<br>3、用户管理：查看、修改、新增功能的表单修改，去掉不需要的内容，并实现修改表单中支持重置密码的功能（√）<br>4、楼层管理（30%）</p>
+<p>2-4 周二<br>1、楼层管理（剩余部分样式设置）</p>
+<p>2-5 周三<br>1、页脚样式修改（√）<br>2、table标题居中，加粗，行高加大(√)<br>3、密码模块修改（放后面做）<br>4、index页面查询输入框长度调整增长（√）<br>5、消息提示的“恭喜、对不起”字样去掉（√）<br>6、项目录入菜单位置调到下面去（√）<br>7、小区维护：考虑将富文本框跟模板下载放到新的页面中去（靠后）<br>8、楼层管理页面，表单提交后Index页内容没有更新（放后面）<br>9、上传图片的表单框长度加长(√)<br>10、前端日期时间选择控件数值差8小时的问题（√）<br>11、iweboffice、签章 安装控件发布（靠后）<br>12、评估作业：点击编辑、word图标<br>13、试着使用pageoffice<br>14、流程节点选中的图标设置特殊颜色以区别（√）<br>15、签章页面返回按钮直接返回登录页面bug（√）<br>16、签章页面对不是IE的浏览器进行识别，提醒用户使用IE<br>17、楼层管理页面剩余样式调整<br>18、签章页名称、标签修改，改为盖章（√）</p>
+<p>2-6 周四</p>
+<p>1、签章页面对不是IE的浏览器进行识别，提醒用户使用IE(√)<br>2、楼层管理页面剩余样式调整(√)<br>3、评估作业、各审核环节：点击编辑、word图标（√）<br>4、修复文件已上传但表单尚未提交时删除文件报错的bug(√)<br>6、项目登记：留言改备注(√)<br>7、任务列表中操作列编辑改为各节点对应的操作名称。分配节点提交改为分配，审核节点提交改为同意。(√)<br>8、任务分配时，应该完成的踏勘、报告时间不能选择过去的时间（√）<br>9、项目测试发布</p>
+<p>2-7 周五<br>1、昨日发布遗漏文件补充发布（√）<br>2、楼层管理添加、修改表单样式修正（√）<br>3、楼层管理页面，表单提交后Index页内容重新刷新（√）<br>4、表单页面确认、取消按钮长度增加(√)<br>5、项目录入、项目登记页面选择地址智能识别功能、取消百度地图截图的展示。（√）</p>
+<p>对百度地图操作的简化</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W04"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/01/20/2020W04/"
+    >第4周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/01/20/2020W04/" class="article-date">
+  <time datetime="2020-01-20T09:14:15.000Z" itemprop="datePublished">2020-01-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><ul>
+<li><input disabled="" type="checkbox"> 清华公司估价OA系统  </li>
+</ul>
+<hr>
+<h6 id="1-20-周一"><a href="#1-20-周一" class="headerlink" title="1-20 周一"></a>1-20 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 项目查询中发现的问题修正</li>
+<li><input checked="" disabled="" type="checkbox"> 协助李颖将mysql数据库数据迁移至sqlserver</li>
+<li><input checked="" disabled="" type="checkbox"> 流程中审核环节添加应收金额，实收金额表单项</li>
+</ul>
+<h6 id="1-21-周二"><a href="#1-21-周二" class="headerlink" title="1-21 周二"></a>1-21 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 安装ubuntu虚拟机</li>
+<li><input checked="" disabled="" type="checkbox"> 虚拟机上安装docker，复习使用docker</li>
+<li><input checked="" disabled="" type="checkbox"> 学习less语法</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W03"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/01/13/2020W03/"
+    >第3周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/01/13/2020W03/" class="article-date">
+  <time datetime="2020-01-13T09:14:15.000Z" itemprop="datePublished">2020-01-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><ul>
+<li><input disabled="" type="checkbox"> 清华公司估价OA系统  </li>
+</ul>
+<hr>
+<h6 id="1-13-周一"><a href="#1-13-周一" class="headerlink" title="1-13 周一"></a>1-13 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 服务器中部署测试系统</li>
+<li><input checked="" disabled="" type="checkbox"> 跟用户开会展示（用户不愿意用这个功能）</li>
+<li><input disabled="" type="checkbox"> ie中部分字体（icon）不显示问题</li>
+<li><input disabled="" type="checkbox"> 评估作业界面去掉comment控件placeholder</li>
+<li><input disabled="" type="checkbox"> ie中现场踏勘 应该完成踏勘时间显示错误</li>
+<li><input disabled="" type="checkbox"> （进行中）项目录入（用户提出的想要把之前线下做过的项目添加到系统中，即不走流程，直接把项目信息、项目文件导入到系统）</li>
+<li><input disabled="" type="checkbox"> 项目特殊操作（将流转中的项目报废）</li>
+<li><input disabled="" type="checkbox"> 项目查询</li>
+</ul>
+<h6 id="1-14-周二"><a href="#1-14-周二" class="headerlink" title="1-14 周二"></a>1-14 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> vue-cli3安装</li>
+<li><input checked="" disabled="" type="checkbox"> 开发部分项目查询功能</li>
+</ul>
+<h6 id="1-15-周三"><a href="#1-15-周三" class="headerlink" title="1-15 周三"></a>1-15 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 项目查询功能</li>
+<li><input checked="" disabled="" type="checkbox"> 项目报废功能</li>
+<li><input disabled="" type="checkbox"> 样式调整：行高、编辑报告</li>
+<li><input disabled="" type="checkbox"> 项目登记逻辑修改</li>
+</ul>
+<h6 id="1-16-周四"><a href="#1-16-周四" class="headerlink" title="1-16 周四"></a>1-16 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 完成项目查询模块</li>
+<li><input checked="" disabled="" type="checkbox"> 线上项目查询文件debug</li>
+<li><input checked="" disabled="" type="checkbox"> 项目发布测试环境</li>
+</ul>
+<h6 id="1-17-周五"><a href="#1-17-周五" class="headerlink" title="1-17 周五"></a>1-17 周五</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 完成项目录入功能（不走流程，直接上传报告文档）</li>
+<li><input checked="" disabled="" type="checkbox"> 优化项目登记</li>
+<li><input checked="" disabled="" type="checkbox"> 重新发布至服务器，服务器上拷贝了一份git可执行程序，用于便捷部署publish文件</li>
+</ul>
+<h6 id="1-19-周日"><a href="#1-19-周日" class="headerlink" title="1-19 周日"></a>1-19 周日</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 修改bug并重新发布至服务器</li>
+<li><input checked="" disabled="" type="checkbox"> 学习typescript</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W02"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/01/06/2020W02/"
+    >第2周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/01/06/2020W02/" class="article-date">
+  <time datetime="2020-01-06T09:14:15.000Z" itemprop="datePublished">2020-01-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><ul>
+<li><input disabled="" type="checkbox"> 清华公司估价OA系统  </li>
+</ul>
+<hr>
+<h6 id="1-6-周一"><a href="#1-6-周一" class="headerlink" title="1-6 周一"></a>1-6 周一</h6><h6 id="1-7-周二"><a href="#1-7-周二" class="headerlink" title="1-7 周二"></a>1-7 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 会议查看进度，系统试运行</li>
+<li><input disabled="" type="checkbox"> 需要维护管理的模块：</li>
+</ul>
+<ol>
+<li>   项目查询</li>
+<li>   新增项目（用户提出的想要把之前线下做过的项目添加到系统中，即不走流程，直接把项目信息、项目文件导入到系统）</li>
+<li>   项目特殊操作（将流转中的项目报废）</li>
+<li>   估价目的维护</li>
+<li>   项目类型（房产类型）的维护</li>
+<li>   居室维护</li>
+<li>   装修维护</li>
+<li>   楼层维护</li>
+<li>   采光维护</li>
+<li>  朝向维护</li>
+</ol>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 修改页脚样式</li>
+<li><input checked="" disabled="" type="checkbox"> 修改文件上传控件，支持一次选择多个文件</li>
+<li><input checked="" disabled="" type="checkbox"> 修改数字类型在文本输入框中的对齐方式为靠右对齐</li>
+<li><input checked="" disabled="" type="checkbox"> 房屋面积、土地面积添加单位(m²)</li>
+<li><input checked="" disabled="" type="checkbox"> 按钮长度设为100px</li>
+<li><input checked="" disabled="" type="checkbox"> table容器左右margin样式去除 </li>
+<li><input checked="" disabled="" type="checkbox"> 修复： 跑马灯图片展示容器边线在特定宽度下会有黑色边线（由于左右不可见图片边界泄露造成）</li>
+<li><input checked="" disabled="" type="checkbox"> 调整样式，去掉内部scrollbar</li>
+</ul>
+<h6 id="1-8-周三"><a href="#1-8-周三" class="headerlink" title="1-8 周三"></a>1-8 周三</h6><ul>
+<li><input disabled="" type="checkbox"> 盖章与终审分离：增加盖章操作页面</li>
+<li><input checked="" disabled="" type="checkbox"> 修改文件上传的路径规则（每个项目建个目录，按年=》月=》项目的文件整理）</li>
+<li><input disabled="" type="checkbox"> 项目分配=》查看基本信息=》评估目的、评估类型</li>
+<li><input disabled="" type="checkbox"> 踏勘实际完成时间=》提交文件时间（不可自选）</li>
+<li><input disabled="" type="checkbox"> 项目分配=》分配踏勘和评估作业人</li>
+<li><input disabled="" type="checkbox"> 盖章页面不手动检查签章是否完成，而是在提交时进行签章是否完成的检查。</li>
+</ul>
+<h6 id="1-9-周四"><a href="#1-9-周四" class="headerlink" title="1-9 周四"></a>1-9 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 修改文件上传的路径规则后，对应的获取文件代码修改。文件展示顺序优化调整</li>
+<li><input checked="" disabled="" type="checkbox"> 项目分配=》查看基本信息=》评估目的、评估类型</li>
+<li><input checked="" disabled="" type="checkbox"> 踏勘实际完成时间=》提交文件时间（不可自选）</li>
+<li><input checked="" disabled="" type="checkbox"> 项目分配=》分配踏勘和评估作业人</li>
+<li><input disabled="" type="checkbox"> 盖章页面不手动检查签章是否完成，而是在提交时进行签章是否完成的检查。</li>
+<li><input disabled="" type="checkbox"> 盖章与终审分离：增加盖章操作页面</li>
+<li><input checked="" disabled="" type="checkbox"> 处理页面载入时之前上传的文件获取出现必须切换页面操作后才出现的bug</li>
+</ul>
+<h6 id="1-10-周五"><a href="#1-10-周五" class="headerlink" title="1-10 周五"></a>1-10 周五</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 盖章页面不手动检查签章是否完成，而是在提交时进行签章是否完成的检查。</li>
+<li><input checked="" disabled="" type="checkbox"> 盖章与终审分离：增加盖章操作页面</li>
+<li><input checked="" disabled="" type="checkbox"> IE显示兼容性问题处理</li>
+<li><input disabled="" type="checkbox"> （进行中）项目录入（用户提出的想要把之前线下做过的项目添加到系统中，即不走流程，直接把项目信息、项目文件导入到系统）</li>
+<li><input disabled="" type="checkbox"> 项目特殊操作（将流转中的项目报废）</li>
+<li><input disabled="" type="checkbox"> 项目查询</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2019W53"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2019/12/30/2019W53/"
+    >第53周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2019/12/30/2019W53/" class="article-date">
+  <time datetime="2019-12-30T07:52:23.000Z" itemprop="datePublished">2019-12-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><ul>
+<li><input disabled="" type="checkbox"> 清华公司估价OA系统  </li>
+</ul>
+<hr>
+<h6 id="12-30-周一"><a href="#12-30-周一" class="headerlink" title="12-30 周一"></a>12-30 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 实现steps控件每个step都可以点击查看该step的信息</li>
+<li><input checked="" disabled="" type="checkbox"> 重新设计各流程操作页面表单样式</li>
+</ul>
+<h6 id="12-31-周二"><a href="#12-31-周二" class="headerlink" title="12-31 周二"></a>12-31 周二</h6><h6 id="1-2-周四"><a href="#1-2-周四" class="headerlink" title="1-2 周四"></a>1-2 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 优化小区汇总显示</li>
+<li><input checked="" disabled="" type="checkbox"> 完成流程</li>
+<li><input checked="" disabled="" type="checkbox"> 修改登陆首页</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2019%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2019年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2019W52"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2019/12/23/2019W52/"
+    >第52周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2019/12/23/2019W52/" class="article-date">
+  <time datetime="2019-12-23T07:52:04.000Z" itemprop="datePublished">2019-12-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><ul>
+<li><input disabled="" type="checkbox"> 清华公司估价OA系统  </li>
+</ul>
+<hr>
+<h6 id="12-23-周一"><a href="#12-23-周一" class="headerlink" title="12-23 周一"></a>12-23 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 名称改为房地产评估综合管理信息系统</li>
+<li><input checked="" disabled="" type="checkbox"> 业务管理在上，系统管理在下。默认展开第一项</li>
+<li><input checked="" disabled="" type="checkbox"> 增加项目登记节点</li>
+<li><input checked="" disabled="" type="checkbox"> 提交报告改成评估作业</li>
+<li><input disabled="" type="checkbox"> 在线编辑</li>
+</ul>
+<h6 id="12-24-周二"><a href="#12-24-周二" class="headerlink" title="12-24 周二"></a>12-24 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 项目登记页面</li>
+</ul>
+<h6 id="12-25-周三"><a href="#12-25-周三" class="headerlink" title="12-25 周三"></a>12-25 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 项目登记逻辑部分</li>
+</ul>
+<h6 id="12-26-周四"><a href="#12-26-周四" class="headerlink" title="12-26 周四"></a>12-26 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 登录页去掉验证码</li>
+<li><input checked="" disabled="" type="checkbox"> 工作台行间距设置</li>
+</ul>
+<h6 id="12-27-周五"><a href="#12-27-周五" class="headerlink" title="12-27 周五"></a>12-27 周五</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 修复小区管理小区名存在重复的问题</li>
+<li><input checked="" disabled="" type="checkbox"> 完成对WebOffice基本在线编辑功能测试（存在问题：金格在线编辑许可为试用，截止2020年3月，需本地安装插件，稳定性暂不可知。）</li>
+<li><input checked="" disabled="" type="checkbox"> 将报告初审、报告二审、报告终审页面调整为响应式布局</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2019%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2019年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2019W51"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2019/12/16/2019W51/"
+    >第51周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2019/12/16/2019W51/" class="article-date">
+  <time datetime="2019-12-16T07:50:16.000Z" itemprop="datePublished">2019-12-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><ul>
+<li><input disabled="" type="checkbox"> 清华公司估价OA系统  </li>
+</ul>
+<hr>
+<h6 id="12-16-周一"><a href="#12-16-周一" class="headerlink" title="12-16 周一"></a>12-16 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 房产估价系统 小区维护页面</li>
+</ul>
+<h6 id="12-17-周二"><a href="#12-17-周二" class="headerlink" title="12-17 周二"></a>12-17 周二</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 房产估价系统sitesurvey页面</li>
+<li><input checked="" disabled="" type="checkbox"> 房产估价系统提交报告页面</li>
+</ul>
+<h6 id="12-18-周三"><a href="#12-18-周三" class="headerlink" title="12-18 周三"></a>12-18 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 房产估价系统初审、再审、终审页面</li>
+<li><input checked="" disabled="" type="checkbox"> 页面美化（项目详情页面调整）</li>
+</ul>
+<h6 id="12-19-周四"><a href="#12-19-周四" class="headerlink" title="12-19 周四"></a>12-19 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 房产估价系统项目分配时设置项目应该踏勘时间、报告应该完成时间</li>
+<li><input checked="" disabled="" type="checkbox"> 房产估价系统现场踏勘节点选择提交时不用指定下一用户，系统自动分配下一用户为踏勘人</li>
+<li><input checked="" disabled="" type="checkbox"> 历史记录上设置几个按钮用来过滤历史记录</li>
+<li><input checked="" disabled="" type="checkbox"> 项目详情页面操作完成后自动重载主页面</li>
+</ul>
+<h6 id="12-20-周五"><a href="#12-20-周五" class="headerlink" title="12-20 周五"></a>12-20 周五</h6><ul>
+<li><input disabled="" type="checkbox"> 估价系统盖章、网上编辑报告</li>
+<li><input disabled="" type="checkbox"> IE兼容测试及调整</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2019%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2019年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2019W47"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2019/11/18/2019W47/"
+    >第47周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2019/11/18/2019W47/" class="article-date">
+  <time datetime="2019-11-18T07:49:54.000Z" itemprop="datePublished">2019-11-18</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><ul>
+<li><input disabled="" type="checkbox"> 清华公司估价OA系统  </li>
+</ul>
+<hr>
+<h6 id="11-18-周一"><a href="#11-18-周一" class="headerlink" title="11-18 周一"></a>11-18 周一</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 清华公司估价OA系统 Flow模型</li>
+</ul>
+<h6 id="11-19-周二"><a href="#11-19-周二" class="headerlink" title="11-19 周二"></a>11-19 周二</h6><h6 id="11-20-周三"><a href="#11-20-周三" class="headerlink" title="11-20 周三"></a>11-20 周三</h6><h6 id="11-21-周四"><a href="#11-21-周四" class="headerlink" title="11-21 周四"></a>11-21 周四</h6><h6 id="11-22-周五"><a href="#11-22-周五" class="headerlink" title="11-22 周五"></a>11-22 周五</h6> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2019%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2019年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/blog/page/6/">上一页</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/5/">5</a><a class="page-number" href="/blog/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/blog/page/8/">8</a><a class="page-number" href="/blog/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/12/">12</a><a class="extend next" rel="next" href="/blog/page/8/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Meme
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="/blog/images/ayer-side.svg" alt="我说"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/blog/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/blog/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+
+    
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="博客 技术 编程 code program" />
+   
+  <meta name="description" content="个人博客" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    经验分享 |  我说
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/blog/dist/main.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-经验分享"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  经验分享
+</h1>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/12/22/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="article-date">
+  <time datetime="2021-12-22T01:00:05.000Z" itemprop="datePublished">2021-12-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">9 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="1、数据库结构同步"><a href="#1、数据库结构同步" class="headerlink" title="1、数据库结构同步"></a>1、数据库结构同步</h5><p>场景：开发过程中，对数据库对象进行一系列操作（常见如表、视图、存储过程、函数的增删改），开发完成后需要在正式环境的数据库上重复一次操作。即麻烦还容易出错</p>
+<p>解决方案：<br>借助于navicat工具。不同版本不大一样， 以navicat premium 10为例。</p>
+<h5 id="2、代码版本管理神器–Git使用"><a href="#2、代码版本管理神器–Git使用" class="headerlink" title="2、代码版本管理神器–Git使用"></a>2、代码版本管理神器–Git使用</h5><p>初学者推荐教程：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000">Git教程 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>
+<h5 id="git的三个区域"><a href="#git的三个区域" class="headerlink" title="git的三个区域"></a>git的三个区域</h5><p>历史记录区：最近的一次提交。别名：HEAD，不区分大小写。历史记录区的上一个记录：HEAD~1。使用git reset 操作可以直接将当前head指向某一个commit-id (谨慎使用)<br>暂存区：可使用git restore –staged 将指定文件的暂存区内容退回至历史记录区状态。使用git commit 可以将暂存区内容提交到历史记录区。<br>工作区：当前文件状态。可使用git add命令将指定文件工作区内容同步到缓存区，使用git restore命令将指定文件工作区退回到历史记录区一致。<br>注：git restore在较老的git版本不可用，使用checkout代替，报错时，可使用git status查看获取帮助</p>
+<h5 id="commit-id"><a href="#commit-id" class="headerlink" title="commit-id"></a>commit-id</h5><p>所有对历史记录区的非查询操作都会产生新的commit id。可以将一个commit-id视为快照 （或地址引用ref）。除了根记录，其他所有记录都有“父记录”,最终都可追溯到根记录。从根记录到Head形成一个commit链。正常情况下，任意两个记录，都可以追溯到同一个“祖先记录”，commit链上找不到共同commit节点的两个commit-id是无法成功合并的。对仓库的各种历史版本穿越、查看操作记录都跟commit-id密切相关。每个commit-id代表了git记录的仓库文件一系列变化的元数据。即不可通过commit-id获取该次提交时间段内发生的变化。</p>
+<p>注：ref引用。包含commit-id hash字符串及指向commit-id的别名字符串，如分支名称、commit-id短写、tag名、head等</p>
+<h6 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h6><p>分支本质上是对commit-id的别名操作，其指向一个commit-id。通过分支可以方便快速对项目文件不同版本切换、合并等操作。</p>
+<h6 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h6><p>为commit-id打标签，一般用于标记里程碑</p>
+<h6 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h6><ul>
+<li><p>git init 创建git仓库</p>
+</li>
+<li><p>git help 查看帮助，默认都是比较常用的命令。git help -a 列出全部命令。git help git 打开网页查看介绍。</p>
+</li>
+<li><p>git clone 从远程仓库创建本地仓库</p>
+</li>
+<li><p>git status 获取当前分支一些基本信息</p>
+</li>
+<li><p>git remote 远程仓库<br>  git remote -v 查看远程仓库列表详情：含git远程仓库的名称与地址<br>  git remote add 添加一个远程仓库作为本地仓库的远程仓库<br>  git remote remove 删除本地仓库与远程仓库的关联</p>
+<p> 注： 只是对远程仓库配置的操作，与内容无关。</p>
+</li>
+<li><p>git fetch 从远程仓库获取最新内容（至拉取到.git目录下，不会对当前branch有影响）</p>
+</li>
+<li><p>git branch 查看本地所有分支名称。<br>  git branch <branch-name>:创建一个分支，内容指向当前分支的head。<br>  git branch -v或git branch -vv 查看本地所有分支的详细情况，后者更详细。<br>  git branch -d或git branch -D:删除某个分支（非当前分支），前者不可删除head不被本地其他分支包含的分支。后者表示确信要删除，尽量使用前者.<br>  git branch -a 查看所有分支，一般要查看远程分支时才用</p>
+</li>
+<li><p>git switch 切换分支（老版本使用checkout）<br>  git switch <branch-name>:切换至指定分支。若指定分支名本地不存在，远程仓库也不存在，则报错。若远程仓库有该分支，则在本地创建该分支，并同步至远程该分支。<br>  git switch -c ：创建一个分支，并切换至该分支。分支head指向切换前的分支head。进行分支切换之前最好确保暂存区、工作区与head一致。若分支本地已经存在则操作失败</p>
+</li>
+<li><p>git log 查看日志，类似的还有git show <ref></p>
+</li>
+<li><p>git reflog 查看所有本地仓库head指向的 commit-id变化日志</p>
+</li>
+<li><p>git add、git commit 、git restore 三个区的操作<br>   git commit -m  编辑消息后提交<br>   git commit -m “Message”:提交时指定信息<br>   git commit –amend 编辑消息后提交，并与提交前head进行rebase -i融合<br>  git commit –amend –no-edit 提交，并与提交前head进行rebase -i 融合，并使用提交前的head消息文本</p>
+</li>
+<li><p>git reset <ref>：将当前分支head设置为<ref>，重置暂存区</p>
+<p>git reset <ref> –hard:将当前分支head设置为<ref>,重置暂存区，同时将工作区内容变更为head</p>
+<p>git reset <ref> –soft:即只将当前分支head设置为<ref>，不改变暂存区和工作区。</p>
+<p>例如：git reset head:将暂存区内容重置。效果等同于git restore –staged .</p>
+</li>
+<li><p>git pull、git push<br> 本地仓库与远程仓库间推送与拉取。<br> git push:操作前最好先git fetch，确保推送到分支没有其他人提交。若有其他人的提交，需先git pull，然后auto-merge或rebase。注意：推送成功必须保证远程分支的head在当前分支的commit链上。<br> git pull:拉取的分支最好未进行过新的提交，否则默认在拉取的时候会进行auto-merge，产生新的merge commit。</p>
+</li>
+<li><p>git merge <ref>合并:<br>git 合并操作，就是通过找到最近的一次共同commit-id,对该commit-id之后的差异进行分别提交的操作。若合并的两个commit对同一个文件同一行都进行修改，则会引发冲突，要求解决冲突后才能合并成功。解决冲突时对冲突的文件进行git add \git commit 操作来生成合并之后的commit。<br>不会引起冲突的情况：<br>  A合并B,A的head在B的commit链上。这种情况，A合并后的head不会产生新的commit-id,直接引用B.实际上就等于是git reset –hard B<br>  两个commit没有共同修改的文件。会产生新的commit-id,commit链上。</p>
+</li>
+<li><p>git rebase 基于某次提交重新提交<br>git rebase <ref><br>git rebase -i <ref> 交互式操作。可在列表中进行分支的合并</p>
+</li>
+<li><p>git stash:将当前工作区、暂存区的内容推入栈。使用命令后重置当前工作区、暂存区与head保持一致。（untracked files不受影响）</p>
+</li>
+</ul>
+<p>git stash list:查看stash 栈内容</p>
+<p>git stash pop:从stash栈中取出一上一个内容</p>
+<p>git stash clear:清空stash栈</p>
+<p>git stash apply <index>:应用栈中的第几条。不会对栈有影响</p>
+<p>建议在原commit-id上，暂存区、工作区无内容的情况下pop|apply。</p>
+<ul>
+<li>git cherry-pick <ref>: 将某个commit提交的修改应用到当前分支。一般用于不在当前commit链中的commit</li>
+</ul>
+<h6 id="建议的代码推送流程"><a href="#建议的代码推送流程" class="headerlink" title="建议的代码推送流程"></a>建议的代码推送流程</h6><p>1、master作为公用的分支，拉取至本地master分支。<br>2、本地创建个人开发分区。必要的可以为每个任务创建分支。<br>3、推送前：在开发分支进行git add、git commit 一系列操作（提交说明最好跟开发内容相关），确保工作区、暂存区干净。<br>4、如果有多个commit-id需要提交： git rebase -i master（或者git reset master;git commit -a）。将多个commit id 合并为一个，避免后面多次处理同一个冲突<br>5、git fetch<br>6、git branch -vv查看远程master分支是否有新的推送<br>7、git switch master切换至master分支。<br>8、如果第6步查到有新的远程推送，则使用git pull拉取最新内容。然后切换至开发的分支，<br>使用git rebase master将开发分支基于新的master head重新产生commit链。注：可能遇到冲突。处理完冲突后git add修改的文件，git rebase –continue即可。<br>9、在master分支进行git merge 开发分支。<br>10、git push推送至远程master<br>11、切换回开发分支，继续开发</p>
+<h5 id="3、利用git和node进行-net-vue项目自动化发布"><a href="#3、利用git和node进行-net-vue项目自动化发布" class="headerlink" title="3、利用git和node进行.net+vue项目自动化发布"></a>3、利用git和node进行.net+vue项目自动化发布</h5><p>需要本地安装git和node，msbuild.exe（.net core 可使用dotnet.exe）；远程服务器安装git</p>
+<p>1、创建远程仓库，用于保存编译后需要发布的文件</p>
+<p>2、在Vue项目的 package.json中添加编写node脚本（windows环境下支持cmd命令）：</p>
+<ul>
+<li><pre><code>init     个人项目可不配置该项，主要用于先同步至远程仓库一致，避免冲突而中断
+</code></pre>
+</li>
+<li><pre><code>build   需要配置好build文件存放的web项目路径。且在csproj项目中为该路径配置包含所有文件
+</code></pre>
+</li>
+<li><pre><code>clear  用于清除不需要的vue build文件。不然发布的文件中vue build文件将越来越多，大多是之前版本的无用数据
+</code></pre>
+</li>
+<li><pre><code>msbuild 需要编译器路径。需要为.net项目添加发布
+</code></pre>
+</li>
+<li><pre><code>gitpush 推送新版本至远程仓库
+</code></pre>
+</li>
+<li><pre><code>ssh 用于到测试环境（213服务器）项目目录下拉取部署文件
+</code></pre>
+</li>
+<li><pre><code>release
+</code></pre>
+</li>
+<li><pre><code>mstsc远程桌面至正式环境，拉取部署文件发布 
+</code></pre>
+</li>
+</ul>
+<p>注意：<br>1、以上每个命令都可以单独使用，完成不同的功能，release是各命令的组合<br>2、webconfig等本地与正式环境不一致的文件需要添加到AppPublish.gitignore下<br>3、对于.net core项目：由于asp.net core项目的实例是独立运行于IIS的，（表现为任务管理器中的任务名为项目.exe名，而非w3p.exe）。在发布时如果项目在运行中会导致exe文件被使用而锁定，拉取后无法立即应用最新程序，所以在服务端可以写个cmd脚本发布时执行：<br>例如：        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># IIS中部署的项目名称为test-sq。发布的项目路径为当前cmd路径下publish文件夹</span><br><span class="line"></span><br><span class="line">C:\Windows\System32\inetsrv\appcmd.exe stop apppool &#x2F;apppool.name:test-sq</span><br><span class="line">cd publish</span><br><span class="line">git pull</span><br><span class="line">C:\Windows\System32\inetsrv\appcmd.exe start apppool &#x2F;apppool.name:test-sq</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://caojin.top/blog/2021/12/22/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E7%BA%B7%E4%BA%91/" rel="tag">纷云</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/blog/2021/04/06/2021W14/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">第14周工作内容</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Meme
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="/blog/images/ayer-side.svg" alt="我说"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/blog/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+
+<script src="/blog/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/blog/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+
+    
+  </div>
+</body>
+
+</html>

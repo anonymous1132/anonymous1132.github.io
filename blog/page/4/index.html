@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="博客 技术 编程 code program" />
+   
+  <meta name="description" content="个人博客" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     我说
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/blog/dist/main.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/blog/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/blog/">我说</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['劳逸结合是不错，但也别放松过了头', '无论是冒险还是做生意，机会都稍纵即逝', '耽误太多时间，事情可就做不完了'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-2020W41"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/10/09/2020W41/"
+    >第41周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/10/09/2020W41/" class="article-date">
+  <time datetime="2020-10-09T02:07:51.000Z" itemprop="datePublished">2020-10-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><h6 id="江宁资监"><a href="#江宁资监" class="headerlink" title="江宁资监"></a>江宁资监</h6><h6 id="婚恋小程序"><a href="#婚恋小程序" class="headerlink" title="婚恋小程序"></a>婚恋小程序</h6><hr>
+<h6 id="10-9-周五"><a href="#10-9-周五" class="headerlink" title="10-9 周五"></a>10-9 周五</h6><p>1、江宁质监系统修改内容<br>2、婚恋小程序剩余部分<br>1、小程序端：<br>    缘分tab:<br>        首页:<br>            分页下一页数据获取功能；（下拉重载，触底更新）√<br>            查询没有数据时显示placeholder类似的提示（图+文字）√；<br>            根据设定的条件查询用户列表功能因为没有数据，还未进行测试。添加部分数据进行测试，发现并修复查询bug<br>        详请页面:<br>            只有静态模板，未实现数据查询；（√）</p>
+<h6 id="10-10-周六"><a href="#10-10-周六" class="headerlink" title="10-10 周六"></a>10-10 周六</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">已完成</span><br><span class="line">我的Tab:</span><br><span class="line">        首页：</span><br><span class="line">            立即完善页：用户头像修改上传功能</span><br><span class="line">        其他：</span><br><span class="line">        整体样式调整；</span><br><span class="line"> 后台：</span><br><span class="line"> 新增用户</span><br></pre></td></tr></table></figure>
+<p>工程报监<br>1、添加字段:项目统一代码、施工许可证编号<br>2、在报审页面右上角，增加一个“填表说明”按钮，点击展示一份完整的填写范表<br>3、建设单位进入报监时，先选择已领施工许可证or未领施工许可证。已领的按正常报监流程，未领取的所有内容不做必填要求<br>4、报监日期(提示:应与施工许可证日期)<br>5、申报材料栏放在五方主体下面(材料目录待提供)、在五方主体填写页面里，每个主体填写时都可以下载材料模板，以及上传(部分完成)<br>6、配置本地sqlserver数据库，并同步服务端数据。开发时使用本地库（最近服务端太卡了）。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W40"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/09/30/2020W40/"
+    >第40周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/09/30/2020W40/" class="article-date">
+  <time datetime="2020-09-30T02:09:50.000Z" itemprop="datePublished">2020-09-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><h6 id="江宁资监"><a href="#江宁资监" class="headerlink" title="江宁资监"></a>江宁资监</h6><h6 id="婚恋小程序"><a href="#婚恋小程序" class="headerlink" title="婚恋小程序"></a>婚恋小程序</h6><hr>
+<h6 id="9-30-周三"><a href="#9-30-周三" class="headerlink" title="9-30 周三"></a>9-30 周三</h6><p>1、婚恋小程序</p>
+<p>婚恋小程序剩余待完善：<br>1、小程序端：<br>    缘分tab:<br>        首页:<br>            分页下一页数据获取功能；<br>            查询没有数据时显示placeholder类似的提示（图+文字）；<br>            根据设定的条件查询用户列表功能因为没有数据，还未进行测试。<br>        详请页面:<br>            只有静态模板，未实现数据查询；<br>    我的Tab:<br>        首页：<br>            立即完善页：用户头像修改上传功能<br>    其他：<br>        整体样式调整；<br>        小程序的发布；<br>        帮我约TA功能<br>2、管理后台：<br>        用户管理：<br>            新增用户：因数据类型的变化及所有选择项实现方式的变化，大部分前端代码要重写<br>            查询用户：数据格式变化，查询接口修改<br>            编辑用户：尚未开始<br>         员工管理：查询功能有问题<br>         其他：<br>            .netcore项目应用程序发布至服务器IIS（本地已测试完成）
+            </p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W39"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/09/21/2020W39/"
+    >第39周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/09/21/2020W39/" class="article-date">
+  <time datetime="2020-09-21T02:07:05.000Z" itemprop="datePublished">2020-09-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><h6 id="江宁资监"><a href="#江宁资监" class="headerlink" title="江宁资监"></a>江宁资监</h6><h6 id="婚恋小程序"><a href="#婚恋小程序" class="headerlink" title="婚恋小程序"></a>婚恋小程序</h6><hr>
+<h6 id="9-21-周一"><a href="#9-21-周一" class="headerlink" title="9-21 周一"></a>9-21 周一</h6><p>1、婚恋小程序<br>2、江宁质监</p>
+<hr>
+<h6 id="9-22-周二"><a href="#9-22-周二" class="headerlink" title="9-22 周二"></a>9-22 周二</h6><p>1、江宁质监对接客户端<br>2、婚恋小程序</p>
+<h6 id="9-24-周四"><a href="#9-24-周四" class="headerlink" title="9-24 周四"></a>9-24 周四</h6><p>1、江宁质监对接客户端<br>2、江宁质监前端显示优化：总体#app、.main div样式调整，组织机构页面默认展开质监站，筑业云工程资料树页面样式布局调整，去除不需要的元素<br>3、解决江宁质监导入的项目缺失五方主体信息问题</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W38"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/09/14/2020W38/"
+    >第38周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/09/14/2020W38/" class="article-date">
+  <time datetime="2020-09-14T02:06:16.000Z" itemprop="datePublished">2020-09-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><h6 id="江宁资监"><a href="#江宁资监" class="headerlink" title="江宁资监"></a>江宁资监</h6><h6 id="婚恋小程序"><a href="#婚恋小程序" class="headerlink" title="婚恋小程序"></a>婚恋小程序</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="9-14-周一"><a href="#9-14-周一" class="headerlink" title="9-14 周一"></a>9-14 周一</h6><p>1、房产评估系统：趋势图同比显示在tooltip上<br>2、房产评估系统交易案例数据导出excel</p>
+<hr>
+<h6 id="9-15-周二"><a href="#9-15-周二" class="headerlink" title="9-15 周二"></a>9-15 周二</h6><p>1、房产评估系统交易案例数据导出excel，并控制权限<br>2、房产评估系统租赁案例导入功能，并控制权限<br>3、交易案例数据导入增加权限控制功能<br>4、筑业会议对接</p>
+<hr>
+<h6 id="9-16-周三"><a href="#9-16-周三" class="headerlink" title="9-16 周三"></a>9-16 周三</h6><p>1、筑业检验批数据对接（完成资料目录获取与展示）<br>2、江宁质量监督的数据导入</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W37"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/09/07/2020W37/"
+    >第37周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/09/07/2020W37/" class="article-date">
+  <time datetime="2020-09-07T02:05:48.000Z" itemprop="datePublished">2020-09-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="9-7-周一"><a href="#9-7-周一" class="headerlink" title="9-7 周一"></a>9-7 周一</h6><p>1、清理江宁质监已有项目数据<br>2、导入江宁质监项目数据<br>3、对接婚恋小程序</p>
+<h6 id="9-8-周二"><a href="#9-8-周二" class="headerlink" title="9-8 周二"></a>9-8 周二</h6><p>1、导入江宁质监项目数据<br>2、对接婚恋小程序<br>3、大王庄新四军四师师部旧址景区景点图片及介绍</p>
+<h6 id="9-9-周三"><a href="#9-9-周三" class="headerlink" title="9-9 周三"></a>9-9 周三</h6><p>1、房价监测增加挂牌数据、标准化数据源<br>2、小区数据具体可查询</p>
+<h6 id="9-10-周四"><a href="#9-10-周四" class="headerlink" title="9-10 周四"></a>9-10 周四</h6><p>1、大王庄静态页面<br>2、房产评估绩效管理部分功能</p>
+<h6 id="9-11-周五"><a href="#9-11-周五" class="headerlink" title="9-11 周五"></a>9-11 周五</h6><p>1、大王庄静态页面适配分辨率<br>2、小区监测查询优化<br>3、趋势图增加环比增长</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W36"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/08/31/2020W36/"
+    >第36周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/08/31/2020W36/" class="article-date">
+  <time datetime="2020-08-31T02:05:13.000Z" itemprop="datePublished">2020-08-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="8-31-周一"><a href="#8-31-周一" class="headerlink" title="8-31 周一"></a>8-31 周一</h6><p>1、江宁质检对接</p>
+<hr>
+<h6 id="9-4-周五"><a href="#9-4-周五" class="headerlink" title="9-4 周五"></a>9-4 周五</h6><p>1、前端添加路由守卫<br>2、江宁质监系统新增相关单位首页：我的项目查询页面<br>3、江宁质监系统导入之前的项目：只做了读取，因为没有企业机构代码，没有做导入部分</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W35"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/08/24/2020W35/"
+    >第35周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/08/24/2020W35/" class="article-date">
+  <time datetime="2020-08-24T02:04:47.000Z" itemprop="datePublished">2020-08-24</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="8-24-周一"><a href="#8-24-周一" class="headerlink" title="8-24 周一"></a>8-24 周一</h6><p>1、开发基础数据</p>
+<h6 id="8-25-周二"><a href="#8-25-周二" class="headerlink" title="8-25 周二"></a>8-25 周二</h6><p>1、开发基础数据</p>
+<h6 id="8-26-周三"><a href="#8-26-周三" class="headerlink" title="8-26 周三"></a>8-26 周三</h6><p>1、房价监测<br>2、网页中添加对服务端Elight.SerUI.exe程序启动的监测及遥控</p>
+<h6 id="8-27-周四"><a href="#8-27-周四" class="headerlink" title="8-27 周四"></a>8-27 周四</h6><p>1、房价监测<br>2、pageoffice服务器debug </p>
+<h6 id="8-28-周五"><a href="#8-28-周五" class="headerlink" title="8-28 周五"></a>8-28 周五</h6><p>1、房价监测<br>2、pageoffice服务器debug </p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W34"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/08/17/2020W34/"
+    >第34周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/08/17/2020W34/" class="article-date">
+  <time datetime="2020-08-17T02:04:28.000Z" itemprop="datePublished">2020-08-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="8-17-周一"><a href="#8-17-周一" class="headerlink" title="8-17 周一"></a>8-17 周一</h6><p>1、完成财务模块<br>2、发布完善江宁质检安全性功能的新版本<br>3、比较法财务计算工具</p>
+<h6 id="8-18-周二"><a href="#8-18-周二" class="headerlink" title="8-18 周二"></a>8-18 周二</h6><p>1、比较法财务计算工具：交易案例查询、交易案例选择、用户导入案例+贝壳网成交案例组合创建视图<br>2、江宁质检：修复通病库查询页面树形列表查询后分页查询按钮异常问题</p>
+<h6 id="8-19-周三"><a href="#8-19-周三" class="headerlink" title="8-19 周三"></a>8-19 周三</h6><p>1、比较法财务计算工具：交易案例新增、移除，参数调整，计算价格等</p>
+<h6 id="8-20-周四"><a href="#8-20-周四" class="headerlink" title="8-20 周四"></a>8-20 周四</h6><p>1、中房学，省协会数据上报功能<br>2、楼盘字典</p>
+<h6 id="8-21-周五"><a href="#8-21-周五" class="headerlink" title="8-21 周五"></a>8-21 周五</h6><p>1、员工信息：估价级别、资质证书、劳动合同<br>2、江宁质检通病库：页面mount时不查询 数据，通病库编辑页面只查询审核未通过、未审核的数据</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W33"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/08/10/2020W33/"
+    >第33周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/08/10/2020W33/" class="article-date">
+  <time datetime="2020-08-10T02:03:14.000Z" itemprop="datePublished">2020-08-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="8-10-周一"><a href="#8-10-周一" class="headerlink" title="8-10 周一"></a>8-10 周一</h6><p>1、房产评估：完成初审、复审、终审业务，修复pageoffice盖章连接自带access数据库报错问题<br>2、江宁质检：修复通病库导入是类别未正确显示的问题<br>3、重新导入江宁质检通病库</p>
+<h6 id="8-11-周二"><a href="#8-11-周二" class="headerlink" title="8-11 周二"></a>8-11 周二</h6><p>1、房产评估：完成盖章业务、已完成列表查询，查看详情<br>2、完成word转pdf服务，盖章后的word转pdf通过其他方式转换印章不透明，经过尝试不同的方法，发现通过调用word方式转换。而IIS调用word经常因为权限问题失败，并且需要修改系统配置等比较麻烦，所以在爬虫程序上添加一个Word转Pdf服务线程，程序间通过tcp通信。</p>
+<h6 id="8-12-周三"><a href="#8-12-周三" class="headerlink" title="8-12 周三"></a>8-12 周三</h6><p>1、完成归档业务<br>2、完成初审、复审、终审驳回操作</p>
+<h6 id="8-13-周四"><a href="#8-13-周四" class="headerlink" title="8-13 周四"></a>8-13 周四</h6><p>1、完成生成导出业务流转单<br>2、项目详情编辑<br>3、江宁质检项目、房产评估项目增强系统弱口令防范，上传文件类型前端后台分别验证</p>
+<h6 id="8-14-周五"><a href="#8-14-周五" class="headerlink" title="8-14 周五"></a>8-14 周五</h6><p>1、财务管理列表<br>2、江宁质检项目文件上传安全性验证与提升</p>
+<h6 id="8-15-周六"><a href="#8-15-周六" class="headerlink" title="8-15 周六"></a>8-15 周六</h6><p>1、财务管理收费表单操作<br>2、财务管理收费历史<br>3、江宁质检剩余通病库导入</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-2020W32"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/08/03/2020W32/"
+    >第32周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/08/03/2020W32/" class="article-date">
+  <time datetime="2020-08-03T02:03:16.000Z" itemprop="datePublished">2020-08-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
+<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
+<h6 id="8-3-周一"><a href="#8-3-周一" class="headerlink" title="8-3 周一"></a>8-3 周一</h6><p>参照流程图，开发业务委托：项目分配、现场踏勘前端后台</p>
+<hr>
+<h6 id="8-4-周二"><a href="#8-4-周二" class="headerlink" title="8-4 周二"></a>8-4 周二</h6><p>参照流程图，开发业务委托：业务节点权限控制、项目分配历史操作记录、现场踏勘历史操作记录前端后台</p>
+<hr>
+<h6 id="8-5-周三"><a href="#8-5-周三" class="headerlink" title="8-5 周三"></a>8-5 周三</h6><p>参照流程图，开发业务委托：完成预评估业务<br>测试时发现并解决项目分配流转逻辑错误问题</p>
+<h6 id="8-6-周四"><a href="#8-6-周四" class="headerlink" title="8-6 周四"></a>8-6 周四</h6><p>1、参照流程图，开发业务委托：完成正式评估业务<br>2、兼顾安全性，解决pageoffice无法获取用户信息（session、cookie）的问题<br>3、完成报废操作</p>
+<p>8-7 周五<br>1、江宁质监：通病库数据录入，开发通病删除功能<br>2、清华评估房产数据录入</p>
+<p>3、开发初审、复审、终审业务</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/blog/page/3/">上一页</a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/blog/page/5/">5</a><a class="page-number" href="/blog/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/12/">12</a><a class="extend next" rel="next" href="/blog/page/5/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Meme
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="/blog/images/ayer-side.svg" alt="我说"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/blog/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/blog/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/blog/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+
+    
+  </div>
+</body>
+
+</html>
