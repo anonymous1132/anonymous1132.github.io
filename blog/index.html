@@ -98,6 +98,58 @@
     
     
     <article
+  id="post-pageoffice"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/12/29/pageoffice/"
+    >谷歌和edge浏览器升级到94及以上版本后反复提示安装pageoffice客户端问题处理</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/12/29/pageoffice/" class="article-date">
+  <time datetime="2021-12-29T02:35:13.000Z" itemprop="datePublished">2021-12-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/blog/images/pageoffice-Image.png"><br><strong>原因</strong>：最新的谷歌和edge升级到94版本后对公网上的http请求下的非同域的http请求进行了拦截，所以就出现了目前遇到的反复提示安装pageoffice客户端的问题，暂时可以用火狐，360浏览器，搜狗等浏览器替代，或者手动对谷歌浏览器进行配置解决。从谷歌长远的目标目标来看，终极解决方案应该是所有公网上的web项目都应该使用https证书。我们针对这一问题接下来也会研究想办法，但是最好的方案是您自己将当前公网上的web项目升级为https方式的即可永久解决此问题。<br><strong>补充</strong>：<br>如果用户项目在公网上用https方案有困难，必须使用普通http和谷歌浏览器，可参考下面的解决方案。<br>谷歌浏览器下手动配置解决反复提示安装PageOffice客户端问题的步骤：<br><strong>步骤1</strong>：打开谷歌浏览器，在浏览器地址栏输入：<br>chrome://flags/#block-insecure-private-network-requests<br><strong>步骤2</strong>: 找到 Block insecure private network requests. 设置为Disabled。<br><img src="/blog/images/pageoffice-Image2.png"><br><strong>步骤3</strong>： 关闭谷歌浏览器，重新打开PageOffice即可。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E7%BA%B7%E4%BA%91/" rel="tag">纷云</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-经验分享"
   class="article article-type-post"
   itemscope
@@ -909,110 +961,6 @@
 <li><input checked="" disabled="" type="checkbox"> 弹窗、浮窗关闭bug</li>
 <li><input checked="" disabled="" type="checkbox"> 估价工具选择交易案例组件不报错不显示bug处理。发现并修复列表中小区名称未显示的bug</li>
 <li><input checked="" disabled="" type="checkbox"> 与客户确认调整方案</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2021%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2021年每周工作记录</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-2021W08"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/blog/2021/02/22/2021W08/"
-    >第8周工作内容</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/blog/2021/02/22/2021W08/" class="article-date">
-  <time datetime="2021-02-22T03:30:16.000Z" itemprop="datePublished">2021-02-22</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="江宁质监"><a href="#江宁质监" class="headerlink" title="江宁质监"></a>江宁质监</h6><p>蓄淋水原型地址： <a target="_blank" rel="noopener" href="https://axhub.im/ax9/d557d29d26ccb156">https://axhub.im/ax9/d557d29d26ccb156</a></p>
-<ol>
-<li><input disabled="" type="checkbox"> 蓄淋水抽查：字段内容：工程进度（主体、竣工验收前检查）；监督日期、要求抽检日期、工作安排、抽查部位、抽查结果（渗漏or不渗漏），渗漏则需要手输内容</li>
-<li><input disabled="" type="checkbox"> 材料抽检：参考抽检通知书的形式</li>
-<li><input disabled="" type="checkbox"> 甲方报检验批，关键节点，必须进行日常安排，考虑如何加入到系统中</li>
-<li><input disabled="" type="checkbox"> 档案编号规则：20210001</li>
-<li><input disabled="" type="checkbox"> 在站长审核之前，监督报告打印时，都增加水印，水印不可去除</li>
-<li><input disabled="" type="checkbox"> 验收记录模板更新（待综合科提供）</li>
-<li><input disabled="" type="checkbox"> 所有巡查记录，格式中增加联系电话，且只有在审核通过后，才可将公章盖上，部分巡查就记录使用业务章（待提供）</li>
-<li><input disabled="" type="checkbox"> 抽查（巡查）模板调整，中间通病内容高度固定，超出部分新增一页，将中间表格描边去除，详细看模板</li>
-<li><input disabled="" type="checkbox"> 建设单位新增“质监档案材料补充”菜单</li>
-</ol>
-<hr>
-<h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a><strong>清华评估先河</strong></h6><ul>
-<li><input disabled="" type="checkbox"> 加入绩效管理，根据绩效算法进行计算呈现</li>
-<li><input disabled="" type="checkbox"> 接入合同管理系统</li>
-<li><input disabled="" type="checkbox"> 加入资产管理</li>
-<li><input disabled="" type="checkbox"> 房产评估签名盖章报错问题</li>
-</ul>
-<hr>
-<h6 id="2-22-周一"><a href="#2-22-周一" class="headerlink" title="2-22 周一"></a>2-22 周一</h6><ul>
-<li><input checked="" disabled="" type="checkbox"> 导入江宁质检项目数据</li>
-<li><input checked="" disabled="" type="checkbox"> 项目删除功能</li>
-</ul>
-<hr>
-<h6 id="2-23-周二"><a href="#2-23-周二" class="headerlink" title="2-23 周二"></a>2-23 周二</h6><ul>
-<li><input disabled="" type="checkbox"> 抽查（巡查）模板调整，中间通病内容高度固定，超出部分新增一页，将中间表格描边去除，详细看模板</li>
-<li><input checked="" disabled="" type="checkbox"> 地基类型、基础类型、桩类型选项维护（待王站整理提供）</li>
-<li><input checked="" disabled="" type="checkbox"> 整改回复涉及到强条时，应进行逐条回复</li>
-<li><input checked="" disabled="" type="checkbox">  验收安排后，需短信通知甲方，验收时间，不可查看验收人员信息</li>
-<li><input checked="" disabled="" type="checkbox">  建设单位注册，去掉资质3项内容，增加经办人</li>
-<li><input checked="" disabled="" type="checkbox">  建设单位重置密码功能</li>
-</ul>
-<hr>
-<h6 id="2-24-周三"><a href="#2-24-周三" class="headerlink" title="2-24 周三"></a>2-24 周三</h6><ul>
-<li><input checked="" disabled="" type="checkbox"> 抽查（巡查）模板调整，中间通病内容高度固定，超出部分新增一页，将中间表格描边去除，详细看模板</li>
-<li><input checked="" disabled="" type="checkbox"> 巡查中的“确认回复”按钮改成“审核”</li>
-<li><input checked="" disabled="" type="checkbox"> 代管项目前面的编号D改成DG</li>
-<li><input checked="" disabled="" type="checkbox"> 报监信息中，将“项目编号”改成“立项项目编号”</li>
-<li><input checked="" disabled="" type="checkbox"> 工程报监时，市政工程字段填写调整</li>
-<li><input checked="" disabled="" type="checkbox"> 解决输入框限制为数字类型时，有时候导致无法输入的问题</li>
-</ul>
-<hr>
-<h6 id="2-25-周四"><a href="#2-25-周四" class="headerlink" title="2-25 周四"></a>2-25 周四</h6><ul>
-<li><input checked="" disabled="" type="checkbox"> 登记管理菜单里，无法查看历史已登记的项目情况</li>
-<li><input checked="" disabled="" type="checkbox"> 监督计划文档需将工程名称，签名内容，附加选项带入文档中</li>
-<li><input checked="" disabled="" type="checkbox"> 档案初审，监督档案列表不全，还有部分内容未展示，其次内控标准，只可以操作最下面档案预审符合要求，不显示后两列</li>
-<li><input checked="" disabled="" type="checkbox"> 代管临时编号处理</li>
-<li><input checked="" disabled="" type="checkbox"> 删除 项目时同时删除筑业系统中的项目</li>
-<li><input checked="" disabled="" type="checkbox"> 解决验收处理无法不通过的问题</li>
-</ul>
-<hr>
-<h6 id="2-26-周五"><a href="#2-26-周五" class="headerlink" title="2-26 周五"></a>2-26 周五</h6><ul>
-<li><input checked="" disabled="" type="checkbox"> 报监通过后，生成的报审表问题如下</li>
-<li><input checked="" disabled="" type="checkbox"> 验收记录模板更新（待综合科提供）</li>
-<li><input checked="" disabled="" type="checkbox"> 最新版本发布</li>
 </ul>
  
       <!-- reward -->

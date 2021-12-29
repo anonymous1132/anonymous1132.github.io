@@ -98,6 +98,99 @@
     
     
     <article
+  id="post-2020W43"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2020/10/10/2020W43/"
+    >第43周工作内容</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2020/10/10/2020W43/" class="article-date">
+  <time datetime="2020-10-10T02:09:22.000Z" itemprop="datePublished">2020-10-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><h6 id="江宁资监"><a href="#江宁资监" class="headerlink" title="江宁资监"></a>江宁资监</h6><h6 id="婚恋小程序"><a href="#婚恋小程序" class="headerlink" title="婚恋小程序"></a>婚恋小程序</h6><hr>
+<h6 id="10-19-周一"><a href="#10-19-周一" class="headerlink" title="10-19 周一"></a>10-19 周一</h6><p>计划任务：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 监督记录需要–科室负责人—站长审核(监督档案下新增站长审核页面)</li>
+<li><input checked="" disabled="" type="checkbox"> 增加一个“档案问题库”的菜单，类似通病库，维护问题，扣分，是否重点等内容</li>
+<li><input checked="" disabled="" type="checkbox"> 开发环境数据库的变更修改同步至生产环境，最新版本发布</li>
+</ul>
+<hr>
+<h6 id="10-20-周二"><a href="#10-20-周二" class="headerlink" title="10-20 周二"></a>10-20 周二</h6><ul>
+<li><input disabled="" type="checkbox"> 数据统计页面开发，具体看原型页面</li>
+<li><input checked="" disabled="" type="checkbox"> 修复服务器生产环境测试发现的问题：解决因为建设单位注册页面的调整，造成建设单位用户审核时，筑业系统添加用户接口报错问题</li>
+</ul>
+<hr>
+<h6 id="10-21-周三"><a href="#10-21-周三" class="headerlink" title="10-21 周三"></a>10-21 周三</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 数据统计页面开发，具体看原型页面</li>
+</ul>
+<hr>
+<h6 id="10-22-周四"><a href="#10-22-周四" class="headerlink" title="10-22 周四"></a>10-22 周四</h6><ul>
+<li><input checked="" disabled="" type="checkbox"> 报监日期下面的提示信息不明显，看不清</li>
+<li><input disabled="" type="checkbox"> 是否待办项目在审核时无法选择<blockquote>
+<p><strong>说明：是否代办项目必须审核通过后才能选择，审核之前选择没有意义</strong></p>
+</blockquote>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 项目拆分和无需拆分成功后，没有进入分配，回到了报监</li>
+<li><input checked="" disabled="" type="checkbox"> 选择待办项目时，代管期限没做必填限制</li>
+<li><input checked="" disabled="" type="checkbox"> 项目数据统计页面可选条件增加所有项目报监填写项</li>
+<li><input checked="" disabled="" type="checkbox"> 发布最新版本</li>
+<li><input checked="" disabled="" type="checkbox"> 优化通用QueryModel实现，只需定义QueryModel类属性的特性值即可自动生成sugarsql where条件Expression lambda表达式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;测试用例</span><br><span class="line"> public class TestQueryModel:BasePaginationModel&lt;EngProject&gt;</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        [ConditionMember(Condition &#x3D; ConditionsEnum.等于)]</span><br><span class="line">        public string ProjectName &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">        [ConditionMember(Condition &#x3D; ConditionsEnum.不等于,IgnoreDefaultValue &#x3D;false)]</span><br><span class="line">        public DateTime? PlanEndDate &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            var model &#x3D; new TestQueryModel &#123; PageIndex &#x3D; 1, PageSize &#x3D; </span><br><span class="line">10,ProjectName&#x3D;&quot;&quot;&#125;;</span><br><span class="line">            var expression &#x3D; model.GetExpression(&quot;A&quot;);</span><br><span class="line">            using (var db&#x3D;BaseLogic.GetInstance())</span><br><span class="line">            &#123;</span><br><span class="line">               var temp&#x3D; db.Queryable&lt;EngProject&gt;().Where(expression);</span><br><span class="line">                int count &#x3D; temp.Count();</span><br><span class="line">                var list &#x3D; temp.ToPageList(model.PageIndex, model.PageSize);</span><br><span class="line">                Console.WriteLine(&quot;共查询到&#123;0&#125;条数据&quot;,count);</span><br><span class="line">                foreach (var item in list)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(&quot;&#123;0&#125;:&#123;1&#125;&quot;, item.ProjectName, item.PlanEndDate);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            Console.Read();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h6 id="10-23-周五"><a href="#10-23-周五" class="headerlink" title="10-23 周五"></a>10-23 周五</h6><p>1、小程序端：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 帮我约TA功能,</li>
+<li><input checked="" disabled="" type="checkbox"> 解决微信小程序打包不能大于2M问题</li>
+</ul>
+<p>2、管理后台：<br>        用户管理：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 新增用户：因数据类型的变化及所有选择项实现方式的变化，大部分前端代码要重写</li>
+<li><input checked="" disabled="" type="checkbox"> 编辑用户</li>
+<li><input checked="" disabled="" type="checkbox"> 查看用户</li>
+<li><input checked="" disabled="" type="checkbox"> 员工管理：查询功能有问题</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-2020W41"
   class="article article-type-post"
   itemscope
@@ -590,67 +683,6 @@
 <h6 id="8-13-周四"><a href="#8-13-周四" class="headerlink" title="8-13 周四"></a>8-13 周四</h6><p>1、完成生成导出业务流转单<br>2、项目详情编辑<br>3、江宁质检项目、房产评估项目增强系统弱口令防范，上传文件类型前端后台分别验证</p>
 <h6 id="8-14-周五"><a href="#8-14-周五" class="headerlink" title="8-14 周五"></a>8-14 周五</h6><p>1、财务管理列表<br>2、江宁质检项目文件上传安全性验证与提升</p>
 <h6 id="8-15-周六"><a href="#8-15-周六" class="headerlink" title="8-15 周六"></a>8-15 周六</h6><p>1、财务管理收费表单操作<br>2、财务管理收费历史<br>3、江宁质检剩余通病库导入</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/2020%E5%B9%B4%E6%AF%8F%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" rel="tag">2020年每周工作记录</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-2020W32"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/blog/2020/08/03/2020W32/"
-    >第32周工作内容</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/blog/2020/08/03/2020W32/" class="article-date">
-  <time datetime="2020-08-03T02:03:16.000Z" itemprop="datePublished">2020-08-03</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h5 id="本周计划"><a href="#本周计划" class="headerlink" title="本周计划"></a>本周计划</h5><h6 id="清华评估先河"><a href="#清华评估先河" class="headerlink" title="清华评估先河"></a>清华评估先河</h6><hr>
-<h6 id="江宁建设工程质监信息平台"><a href="#江宁建设工程质监信息平台" class="headerlink" title="江宁建设工程质监信息平台"></a>江宁建设工程质监信息平台</h6><hr>
-<h6 id="8-3-周一"><a href="#8-3-周一" class="headerlink" title="8-3 周一"></a>8-3 周一</h6><p>参照流程图，开发业务委托：项目分配、现场踏勘前端后台</p>
-<hr>
-<h6 id="8-4-周二"><a href="#8-4-周二" class="headerlink" title="8-4 周二"></a>8-4 周二</h6><p>参照流程图，开发业务委托：业务节点权限控制、项目分配历史操作记录、现场踏勘历史操作记录前端后台</p>
-<hr>
-<h6 id="8-5-周三"><a href="#8-5-周三" class="headerlink" title="8-5 周三"></a>8-5 周三</h6><p>参照流程图，开发业务委托：完成预评估业务<br>测试时发现并解决项目分配流转逻辑错误问题</p>
-<h6 id="8-6-周四"><a href="#8-6-周四" class="headerlink" title="8-6 周四"></a>8-6 周四</h6><p>1、参照流程图，开发业务委托：完成正式评估业务<br>2、兼顾安全性，解决pageoffice无法获取用户信息（session、cookie）的问题<br>3、完成报废操作</p>
-<p>8-7 周五<br>1、江宁质监：通病库数据录入，开发通病删除功能<br>2、清华评估房产数据录入</p>
-<p>3、开发初审、复审、终审业务</p>
  
       <!-- reward -->
       

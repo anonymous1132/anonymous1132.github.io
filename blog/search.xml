@@ -4097,4 +4097,16 @@
         <tag>纷云</tag>
       </tags>
   </entry>
+  <entry>
+    <title>谷歌和edge浏览器升级到94及以上版本后反复提示安装pageoffice客户端问题处理</title>
+    <url>/blog/2021/12/29/pageoffice/</url>
+    <content><![CDATA[<p><img src="/blog/images/pageoffice-Image.png"><br><strong>原因</strong>：最新的谷歌和edge升级到94版本后对公网上的http请求下的非同域的http请求进行了拦截，所以就出现了目前遇到的反复提示安装pageoffice客户端的问题，暂时可以用火狐，360浏览器，搜狗等浏览器替代，或者手动对谷歌浏览器进行配置解决。从谷歌长远的目标目标来看，终极解决方案应该是所有公网上的web项目都应该使用https证书。我们针对这一问题接下来也会研究想办法，但是最好的方案是您自己将当前公网上的web项目升级为https方式的即可永久解决此问题。<br><strong>补充</strong>：<br>如果用户项目在公网上用https方案有困难，必须使用普通http和谷歌浏览器，可参考下面的解决方案。<br>谷歌浏览器下手动配置解决反复提示安装PageOffice客户端问题的步骤：<br><strong>步骤1</strong>：打开谷歌浏览器，在浏览器地址栏输入：<br>chrome://flags/#block-insecure-private-network-requests<br><strong>步骤2</strong>: 找到 Block insecure private network requests. 设置为Disabled。<br><img src="/blog/images/pageoffice-Image2.png"><br><strong>步骤3</strong>： 关闭谷歌浏览器，重新打开PageOffice即可。</p>
+]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>纷云</tag>
+      </tags>
+  </entry>
 </search>
